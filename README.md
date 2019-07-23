@@ -63,7 +63,7 @@ http://www.stuffithoughtiknew.com/2019/02/detecting-bloodhound.html
 60 minute period 
 index=winevent_sec EventCode=4662  Accesses="Read Property"  (WHITELIST A SHEDLOAD OF SERVICE ACCOUNTS)
 | stats count by Account_Name
-| where count >0
+| where count >x (where x is a good baseline)
 
 ## KERBEROASTING:
 
