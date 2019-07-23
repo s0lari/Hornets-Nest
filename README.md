@@ -121,6 +121,7 @@ Fundamentally you're going to be in a pretty good place if you manage these thin
 28) Audit domain passwords - use pass-phrases, enforce 15 character minimum after LOTS of training and LOTS of patience. Think https://xkcd.com/936/ - totally do-able and in the past in the entire company only had 1 person need to reset the next day. Dump the ntds.dit file via shadow copy and crack using a decent GPU rig and hashcat. Have those users change their passwords - test and retest. If you can't crack it using some big lists, it will reduce risk quite a bit.
 29) haveibeenpwned.com - self explainatory
 30) Disallow the use of personal email (gmail/hotmail etc) - no point in spending loads of money on filtering and tech only to have your workstations pwned by a personal phishing email.
+31) OSINT/Recon check yourself - see what is available or posted by your users! Especially Linkedin for technologies used by admins/secops.
 
 
 
