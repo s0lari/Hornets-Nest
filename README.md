@@ -266,7 +266,10 @@ https://ghidra-sre.org/
  
 FLARE VM is a freely available and open sourced Windows-based security distribution designed for reverse engineers, malware analysts, incident responders, forensicators, and penetration testers.
 https://www.fireeye.com/blog/threat-research/2017/07/flare-vm-the-windows-malware.html
-General
+
+
+## General
+
 CIS top 20 security controls  - great for scoring the maturity of a company's security.
 https://learn.cisecurity.org/20-controls-download
  
