@@ -88,6 +88,7 @@ index=winevent_sec EventCode=4769 Ticket_Options=0x40810000 Ticket_Encryption_Ty
 
 Fundamentally you're going to be in a pretty good place if you manage these things in your environment - aims mainly at Windows Domain environements (brain dump, no priority/order as each environment is different, some are absolute must tho):
 
+0) BACKUPS - Ransomware is real - test your backups, do DR scenarios - tape is old, but at least it is disconnected from environemnt.
 1) Remove local admin account usage for standard users
 2) Enable host based firewalls on your internal client machines (treat internal network as hostile) & Segment internal networks (eg by department - makes logging easier as well as users generally do the same kinds of activities, so long tailed stat analysis is easier)!
 3) Disable LLMNR & NBNS & SMB v1 on your network (do even more with CIS hardening guides)
