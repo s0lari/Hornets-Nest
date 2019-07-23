@@ -51,6 +51,8 @@ Set up a service account that is not used by the business in any way and set the
 
 See Splunk Detections section for example query.
 
+**COUNTER-POINT: Some red-teamers will check for honey accounts - generally this is done by checking when the account was last used/logged into - if you have a script/manual process that logs into that account once every 14 days or so, you should be alright -whitelist this activity in SIEM**
+
 
 # Splunk Detections
 ## Query for Splunk detections for Honey User
