@@ -60,7 +60,7 @@ index=winevent_sec EventCode="*"  user=xxxxxxxxx
 
 ## Honey SPN for kerberoasting attack detection.
 (whitelist false positives as necessary)
-index=winevent_sec EventCode=4769 Service_name=<honey SPN>
+index=winevent_sec EventCode=4769 Service_name=super_not_shady_SPN
 
 
 ## BLOODHOUND:
