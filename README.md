@@ -56,7 +56,7 @@ Query for Splunk detections for Honey User
 index=winevent_sec EventCode="*"  user=xxxxxxxxx
 
 
-**BLOODHOUND:**
+## BLOODHOUND:
 
 http://www.stuffithoughtiknew.com/2019/02/detecting-bloodhound.html
 
@@ -65,12 +65,14 @@ index=winevent_sec EventCode=4662  Accesses="Read Property"  (WHITELIST A SHEDLO
 | stats count by Account_Name
 | where count >0
 
-**KERBEROASTING:**
+## KERBEROASTING:
 
-60 min (adjust variables below and whitelist any users that are service accounts that are noisey). This is for any encryption type which allows for failures.
+**60 min (adjust variables below and whitelist any users that are service accounts that are noisey). This is for any encryption type which allows for failures.**
+
 index=winevent_sec EventCode=4769 Ticket_Options=0x40810000 Service_Name!="*$" Service_Name!="krbtgt" Account_Name!="*$@*"   | dedup Service_Name   | stats  count by user  | where  count>X (where x is a good baseline)
 
-Only for specific RC4 encrypted requested Kerberos requests – this is since they crack faster so are generally the hackers choice
+**Only for specific RC4 encrypted requested Kerberos requests – this is since they crack faster so are generally the hackers choice.**
+
 index=winevent_sec EventCode=4769 Ticket_Options=0x40810000 Ticket_Encryption_Type=0x17 Service_Name!="*$" Service_Name!="krbtgt" Account_Name!="*$@*"   | dedup Service_Name   | stats  count by user  | where  count>X (where x is a good baseline)
 
 
