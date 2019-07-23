@@ -46,6 +46,7 @@ Create a user that is not used by the business in any way and set the logon hour
 Also see the bloodhoud section in the Splunk Detections area below to use this in a similar fashion.
 
 **Kerberoasting Honey SPN**
+
 Set up a service account that is not used by the business in any way and set the logon hours to fully deny. Set up detection for any logon attempts to an SPN that is configured on this account. Whitelist any maintenance/configuration systems. This should be a high fidelity detection on kerberoasting.
 
 
