@@ -2,7 +2,7 @@
 Purple Team Security
 
 
-This repo will function as a repo for a number of resources that I collate - ill try to keep it tidy! ;)
+This repo will function as a repo for a number of resources/brain dumps that I collate - ill try to keep it tidy! ;)
 
 # CyberChef Recipes
 
