@@ -84,6 +84,38 @@ index=winevent_sec EventCode=4769 Ticket_Options=0x40810000 Service_Name!="*$" S
 index=winevent_sec EventCode=4769 Ticket_Options=0x40810000 Ticket_Encryption_Type=0x17 Service_Name!="*$" Service_Name!="krbtgt" Account_Name!="*$@*"   | dedup Service_Name   | stats  count by user  | where  count>X (where x is a good baseline)
 
 
+## Defense in Depth Security stack
+
+Fundamentally you're going to be in a pretty good place if you manage these things in your environment - aims mainly at Windows Domain environements (brain dump, no priority/order as each environment is different, some are absolute must tho):
+
+1) Remove local admin account usage for standard users
+2) Enable host based firewalls on your internal client machines (treat internal network as hostile) & Segment internal networks (eg by department - makes logging easier as well as users generally do the same kinds of activities, so long tailed stat analysis is easier)!
+3) Disable LLMNR & NBNS & SMB v1 on your network (do even more with CIS hardening guides)
+4) Use AV - ensure it is running - if you can afford NGAV+EDR - awesomesauce!
+5) Use application whitelisting - SRP is good when you have no alternative
+6) Log all your things - sysmon, Active Directory, web apps - Azure Sentinel, Various ELK Stacks.  Pretty cheap is Rapid 7 InsightIDR, which hooks into 11.
+7) Email filtering solution (O365 is not bad) 
+8) If you're using anything O365/Azure - get the Advanced Threat Protections/ UEBA solutions - they're pretty good
+9) Deploy Sysmon and have that logged to your SIEM - various configs available - see below.
+10) Deploy Honey tokens/files/users/admins/SRP/GPO/pots/networks
+11) Vuln scanner - Rapid7 InsightVM is good. It also dumps vulnerability data into InsightIDR
+12) Patch your stuff! As fast and as much as businessly possible.
+13) Get a UTM firewall (Fortigate are pretty good and not as expensive as Palo Alto) - this will allow the following:
+14) Internet Web Whitelisting (ie, default deny unless category/site specifically allowed)
+15) DNS Filtering
+16) Web App firewalling on your webapps & Network IPS all the things!
+17) Gateway AV
+18) App control at gateway (good for detecting/preventing DNS tunneling & CASBI functionality too)
+19) 802.1x/Forticlient has a similar function that denies access
+20) Encrypt your laptops with Bitlocker + PIN
+21) Lock down windows store
+22) Lock down cmd/powershell usage
+23) 2FA - DUO is very good
+24) Threat intelligence feed for your logs in your SIEM
+25) TRAIN YOUR STAFF! All the above is for naught if your staff aren't well trained, both users and SOC. Pluralsight has some good content - SANS/OSCP = excellent standard. This will enable more advanced functions once you reach maturity, like threat hunting and purple teaming.
+
+
+
 # Security Resources - Links, books, CTFs, etc
 
 ## Blue Team & Threat Hunting
