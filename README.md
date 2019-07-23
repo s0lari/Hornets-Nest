@@ -113,7 +113,7 @@ Fundamentally you're going to be in a pretty good place if you manage these thin
 22) Lock down cmd/powershell usage
 23) 2FA - DUO is very good. Used in conjuntion with an SSL VPN can work nicely - means your internal webapps are not directly accessible too!
 24) Threat intelligence feed for your logs in your SIEM
-25) TRAIN YOUR STAFF! All the above is for naught if your staff aren't well trained, both users and SOC. Pluralsight has some good content - SANS/OSCP = excellent standard. This will enable more advanced functions once you reach maturity, like threat hunting and purple teaming.
+25) TRAIN YOUR STAFF! All is for naught if your staff aren't well trained, both users and SOC. Pluralsight has some good content - SANS/OSCP = excellent standard. This will enable more advanced functions once you reach maturity, like threat hunting and purple teaming.
 26) DLP - don't spend a huge amount of time on this, much bigger wins possible - prevents accidental loss of data.
 27) Incident response plans - make some, test them. Tabletop exercises can be useful.
 28) Audit domain passwords - use pass-phrases, enforce 15 character minimum after LOTS of training and LOTS of patience. Think https://xkcd.com/936/ - totally do-able and in the past in the entire company only had 1 person need to reset the next day. Dump the ntds.dit file via shadow copy and crack using a decent GPU rig and hashcat. Have those users change their passwords - test and retest. If you can't crack it using some big lists, it will reduce risk quite a bit.
