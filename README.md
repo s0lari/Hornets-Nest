@@ -91,7 +91,7 @@ Fundamentally you're going to be in a pretty good place if you manage these thin
 0) BACKUPS - Ransomware is real - test your backups, do DR scenarios - tape is old, but at least it is disconnected from environemnt.
 1) Remove local admin account usage for standard users
 2) Enable host based firewalls on your internal client machines (treat internal network as hostile) & Segment internal networks (eg by department - makes logging easier as well as users generally do the same kinds of activities, so long tailed stat analysis is easier)!
-3) Disable LLMNR & NBNS & SMB v1 on your network (do even more with CIS hardening guides)
+3) Disable LLMNR & NBNS & SMB v1 on your network (do even more with CIS hardening guides), and disable WPAD if it isn't explicitly used.
 4) Use AV - ensure it is running - if you can afford NGAV+EDR - awesomesauce!
 5) Use application whitelisting - SRP is good when you have no alternative
 6) Log all your things - sysmon, Active Directory, web apps - Azure Sentinel, Various ELK Stacks.  Pretty cheap is Rapid 7 InsightIDR, which hooks into 11.
