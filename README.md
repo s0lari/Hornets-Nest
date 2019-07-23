@@ -311,34 +311,33 @@ https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA
 Various CTF and hack related things.
 https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w/videos?disable_polymer=1
  
-## Podcasts (Star rated for best shows (content or entertaining))
-
+## Podcasts 
   
-**Purple Squad Security - Purple Team podcast
+Purple Squad Security - Purple Team podcast
 
-**Black Hills Information Security - Large range of high quality teaching.
+Black Hills Information Security - Large range of high quality teaching.
 
-**Darknet Diaries - Stories of past hacks.
+Darknet Diaries - Stories of past hacks.
 
-**Malicious life
+Malicious life
 
-**Paul's Enterprise Security Weekly - General podcast reviewing enterprise news/security products
+Paul's Enterprise Security Weekly - General podcast reviewing enterprise news/security products
 
  
  
-*Paul's Security Weekly - General podcast containing various enterprise related topics
+Paul's Security Weekly - General podcast containing various enterprise related topics
 
-*Sans Internet Stormcenter Daily - 5 Minute or so show on the highlights of security news from SANS
+Sans Internet Stormcenter Daily - 5 Minute or so show on the highlights of security news from SANS
 
-*State of the Hack - Mandiant in depth podcast
+State of the Hack - Mandiant in depth podcast
 
-*Beers with TALOS - General news and discussions podcast
+Beers with TALOS - General news and discussions podcast
 
-*Breach - Stories of past hacks.
+Breach - Stories of past hacks.
 
-*Defensive Security Podcast - Higher level security news discussions.
+Defensive Security Podcast - Higher level security news discussions.
 
-*Smashing Security - Stories of past hacks and security news.
+Smashing Security - Stories of past hacks and security news.
 
  
 The Cyberwire - Overall news
