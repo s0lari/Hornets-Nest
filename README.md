@@ -9,14 +9,21 @@ This repo will function as a repo for a number of resources/brain dumps that I c
 **Encrypt Strings in Group Policy Preference File format (useful for creating Honey xml files with amusing passwords that PowerSploit etc will decrypt - like the lyrics of a certain Rick Astley song...)**
 
 Encode_text('UTF16LE (1200)')
+
 AES_Encrypt({'option':'Hex','string':'4e 99 06 e8  fc b6 6c c9  fa f4 93 10  62 0f fe e8 f4 96 e8 06  cc 05 79 90  20 9b 09 a4  33 b6 6c 1b'},{'option':'Hex','string':''},'CBC','Raw','Raw')
+
 To_Base64('A-Za-z0-9+/=')
+
 
 **Encrypt Strings in Group Policy Preference File format (to check the above, as well as for offensive checks).**
 
 From_Base64('A-Za-z0-9+/=',true)
+
 AES_Decrypt({'option':'Hex','string':'4e 99 06 e8  fc b6 6c c9  fa f4 93 10  62 0f fe e8 f4 96 e8 06  cc 05 79 90  20 9b 09 a4  33 b6 6c 1b'},{'option':'Hex','string':''},'CBC','Raw','Raw',{'option':'Hex','string':''})
+
 Decode_text('UTF16LE (1200)')
+
+
 
 # Honey-all-the-things ideas
 
