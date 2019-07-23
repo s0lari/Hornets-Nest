@@ -66,6 +66,7 @@ index=winevent_sec EventCode=4662  Accesses="Read Property"  (WHITELIST A SHEDLO
 | where count >0
 
 **KERBEROASTING:**
+
 60 min (adjust variables below and whitelist any users that are service accounts that are noisey). This is for any encryption type which allows for failures.
 index=winevent_sec EventCode=4769 Ticket_Options=0x40810000 Service_Name!="*$" Service_Name!="krbtgt" Account_Name!="*$@*"   | dedup Service_Name   | stats  count by user  | where  count>X (where x is a good baseline)
 
