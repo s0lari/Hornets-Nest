@@ -15,7 +15,7 @@ AES_Encrypt({'option':'Hex','string':'4e 99 06 e8  fc b6 6c c9  fa f4 93 10  62 
 To_Base64('A-Za-z0-9+/=')
 
 
-**Encrypt Strings in Group Policy Preference File format (to check the above, as well as for offensive checks).**
+**Decrypt Strings in Group Policy Preference File format (to check the above, as well as for offensive checks).**
 
 From_Base64('A-Za-z0-9+/=',true)
 
