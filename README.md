@@ -44,7 +44,7 @@ A baseline example xml file could be the following (from https://adsecurity.org/
 
 You could use the cyberchef recipe at the top of this page to create a new string and enter that into the cpassword variable.
 
-Some example files : https://github.com/s0lari/Decoy-sploit/blob/master/README.md#decoy-sploit
+Some example files : https://github.com/s0lari/Decoy-sploit
 
 ## Honey files
 General other honey files can be created in a similar fashion and scattered around file shares deep in the structure that contain strings such as 'password' 'pass' 'secret' 'administrator' etc so that any other automated powershell scripts will find them and trigger audit rules in your SIEM (ELK/Splunk etc).
