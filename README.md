@@ -94,6 +94,9 @@ index=winevent_sec EventCode=4769 Ticket_Options=0x40810000 Service_Name!="*$" S
 
 index=winevent_sec EventCode=4769 Ticket_Options=0x40810000 Ticket_Encryption_Type=0x17 Service_Name!="*$" Service_Name!="krbtgt" Account_Name!="*$@*"   | dedup Service_Name   | stats  count by user  | where  count>X (where x is a good baseline)
 
+## DNS High Entropy Domain names - DGA Detection
+| tstats count(DNS.dest) AS "Count of dest" from datamodel=Network_Resolution where (nodename = DNS) (DNS.query!="**copy and use this as whitelisting entry*")  groupby DNS.query, DNS.src prestats=true | stats dedup_splitvals=t count(DNS.dest) AS "CountD" by DNS.query, DNS.src | sort limit=25000 DNS.query | fields - _span | rename DNS.query AS query |rename DNS.src AS src| fillnull "CountD" | fields query, "CountD", src |where CountD=1 |eval list="mozilla"| `ut_parse(query, list)` | `ut_shannon(ut_domain)` | where ut_shannon>3.5 | table ut_shannon, query,  src | sort ut_shannon desc
+
 
 ## Defense in Depth Security stack
 
