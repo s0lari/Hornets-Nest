@@ -58,6 +58,8 @@ Also see the bloodhoud section in the Splunk Detections area below to use this i
 
 Set up a service account that is not used by the business in any way and set the logon hours to fully deny. Set up detection for any logon attempts to an SPN that is configured on this account. Whitelist any maintenance/configuration systems. This should be a high fidelity detection on kerberoasting.
 
+Set ServicePrinciple name like so : setspn -U -A http/blah SERVICE_USER_ACCOUNT_HERE
+
 See Splunk Detections section for example query.
 
 **COUNTER-POINT: Some red-teamers will check for honey accounts - generally this is done by checking when the account was last used/logged into - if you have a script/manual process that logs into that account once every 14 days or so, you should be alright -whitelist this activity in SIEM**
