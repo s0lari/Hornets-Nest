@@ -216,6 +216,10 @@ https://www.owasp.org/index.php/Main_Page
  
 OWASP Cheat sheets
 https://github.com/OWASP/CheatSheetSeries
+
+Some good Active Directory Deception ideas
+
+https://www.labofapenetrationtester.com/2018/10/deploy-deception.html
  
 
 ## Purple Team
