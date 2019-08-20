@@ -184,14 +184,14 @@ Additional Information:
 
 Using these properties lookups can function like a fingerprint for BloodHound activity - there are a lot of Active Directory queries and operations that query AD attributes and properties that are not in these forms, so you can use this to remove false positives.
 
-Properties:		Read Property
+Properties:	Read Property
 	User
 		Public Information
 			cn
 			distinguishedName
-		Group Membership
-			member
-		General Information
+		Group Membership	
+		member	
+	General Information
 			primaryGroupID
 			objectSid
 			sAMAccountName
