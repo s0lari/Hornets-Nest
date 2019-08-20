@@ -186,28 +186,50 @@ Using these properties lookups can function like a fingerprint for BloodHound ac
 
 Properties:	Read Property
 User
+
 Public Information
+
 cn
+
 distinguishedName
-Group Membership	
-member	
+
+Group Membership
+
+member
+
 General Information
+
 primaryGroupID
+
 objectSid
+
 sAMAccountName
+
 sAMAccountType
-dNSHostName
+
 dNSHostName
 
+dNSHostName
+
+
 Properties:	Read Property
+
 General Information
+
 sAMAccountType
+
 primaryGroupID
+
 Account Restrictions
+
 userAccountControl
+
 Public Information
+
 objectClass
+
 User
+
 
 ## KERBEROASTING:
 
