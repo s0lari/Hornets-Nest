@@ -1,5 +1,5 @@
 # Hornets-Nest Overview
-This repo will function as a repo for a number of resources/brain dumps that I collate relating to a lot of security. I try to learn both red and blue team elements as I believe Red informs Blue. You cannot detect what you don't know exists or is possible. This is a kind of 'Purple Teaming' emphasis. - ill try to keep it tidy! ;)
+This repo will function as a repo for a number of resources/brain dumps that I collate relating to a lot of security. I try to learn both red and blue team elements as I believe Red Team informs Blue Team. You cannot detect what you don't know exists or is possible. This is a kind of 'Purple Teaming' emphasis. - ill try to keep it tidy! ;)
 
 # CyberChef Recipes
 
