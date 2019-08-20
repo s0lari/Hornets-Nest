@@ -194,6 +194,7 @@ Using these properties lookups can function like a fingerprint for BloodHound ac
 **LOOKUP EVENT 1**
 
 Properties:	Read Property
+
 User
 
 Public Information
