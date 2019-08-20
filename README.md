@@ -3,7 +3,6 @@
   <img src="https://github.com/s0lari/Hornets-Nest/blob/master/ew0dyjk6gcrnpku8paus.png" width="350" title="hover text">
 </p>
 
-Purple Team Security
 
 
 This repo will function as a repo for a number of resources/brain dumps that I collate - ill try to keep it tidy! ;)
