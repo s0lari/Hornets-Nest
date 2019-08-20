@@ -84,7 +84,7 @@ index=winevent_sec EventCode=4769 Service_Name=super_not_shady_SPN
 
 Some inspiration from http://www.stuffithoughtiknew.com/2019/02/detecting-bloodhound.html and help from @CTOBInsights with the Splunk query.
 
-When you run Bloodhound, you get the following events: 
+When you run Bloodhound, you get the following events on your AD Security log after having configured logging on a particular canary user (see the link above): 
 
 ```
 Log Name:      Security
