@@ -78,12 +78,112 @@ index=winevent_sec EventCode=4769 Service_Name=super_not_shady_SPN
 
 ## BLOODHOUND:
 
-http://www.stuffithoughtiknew.com/2019/02/detecting-bloodhound.html
+Some inspiration from http://www.stuffithoughtiknew.com/2019/02/detecting-bloodhound.html
 
 Time period -eg 60 minutes
 index=winevent_sec EventCode=4662  Accesses="Read Property"  (WHITELIST A SHEDLOAD OF SERVICE ACCOUNTS)
 | stats count by Account_Name
 | where count >x (where x is a good baseline)
+
+This will give a pretty good result, however, if you look at event logs that come from running bloodhound, you can see that there are some other indicators we can alert on:
+
+Log Name:      Security
+Source:        Microsoft-Windows-Security-Auditing
+Date:          20/08/2019 09:00:29
+Event ID:      4662
+Task Category: Directory Service Access
+Level:         Information
+Keywords:      Audit Success
+User:          N/A
+Computer:      dc1.internal.blah123.com
+Description:
+An operation was performed on an object.
+
+Subject :
+	Security ID:		INTERNAL\Administrator
+	Account Name:		Administrator
+	Account Domain:		INTERNAL
+	Logon ID:		0x2FA81
+
+Object:
+	Object Server:		DS
+	Object Type:		user
+	Object Name:		CN=Rhubarb,CN=Users,DC=internal,DC=blah123,DC=com
+	Handle ID:		0x0
+
+Operation:
+	Operation Type:		Object Access
+	Accesses:		Read Property
+				
+	Access Mask:		0x10
+	Properties:		Read Property
+		**General Information
+			sAMAccountType
+			primaryGroupID
+		Account Restrictions
+			userAccountControl
+		Public Information
+			objectClass
+	User**
+
+
+Additional Information:
+	Parameter 1:		-
+	Parameter 2:		
+
+Log Name:      Security
+Source:        Microsoft-Windows-Security-Auditing
+Date:          20/08/2019 09:00:29
+Event ID:      4662
+Task Category: Directory Service Access
+Level:         Information
+Keywords:      Audit Success
+User:          N/A
+Computer:      dc1.internal.blah123.com
+Description:
+An operation was performed on an object.
+
+Subject :
+	Security ID:		INTERNAL\Administrator
+	Account Name:		Administrator
+	Account Domain:		INTERNAL
+	Logon ID:		0x2FA81
+
+Object:
+	Object Server:		DS
+	Object Type:		user
+	Object Name:		CN=Rhubarb,CN=Users,DC=internal,DC=blah123,DC=com
+	Handle ID:		0x0
+
+Operation:
+	Operation Type:		Object Access
+	Accesses:		Read Property
+				
+	Access Mask:		0x10
+	Properties:		Read Property
+	**User
+		Public Information
+			cn
+			distinguishedName
+		Group Membership
+			member
+		General Information
+			primaryGroupID
+			objectSid
+			sAMAccountName
+			sAMAccountType
+		dNSHostName
+			dNSHostName**
+
+
+Additional Information:
+	Parameter 1:		-
+	Parameter 2:		
+
+Using these properties lookups can function like a fingerprint for BloodHound activity - there are a lot of Active Directory queries and operations that query AD attributes and properties that are not in these forms, so you can use this to remove false positives.
+
+
+
 
 ## KERBEROASTING:
 
