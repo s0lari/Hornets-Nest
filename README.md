@@ -84,13 +84,7 @@ index=winevent_sec EventCode=4769 Service_Name=super_not_shady_SPN
 
 Some inspiration from http://www.stuffithoughtiknew.com/2019/02/detecting-bloodhound.html
 
-Time period -eg 60 minutes
-```
-index=winevent_sec EventCode=4662  Accesses="Read Property"  (WHITELIST A SHEDLOAD OF SERVICE ACCOUNTS)
-| stats count by Account_Name
-| where count >x (where x is a good baseline)
-```
-This will give a pretty good result, however, if you look at event logs that come from running bloodhound, you can see that there are some other indicators we can alert on:
+When you run Bloodhound, you get the following events: 
 
 ```
 Log Name:      Security
@@ -240,6 +234,35 @@ Public Information
 objectClass
 
 User
+
+**Splunk Search for Bloodhound**
+
+Time period -eg 60 minutes
+```
+index=winevent_sec EventCode=4662 Accesses="Read Property" 
+| rex field=_raw "(?<PropertiesLIST>(?s)(?<=Properties:).+?(?=Additional))"
+| eval PropertiesLIST=replace(PropertiesLIST, "[\n\r]",";")
+| makemv delim=";" PropertiesLIST
+| stats count values(PropertiesLIST) as PList by user
+| eval propertyLen=mvcount(PList)
+| where propertyLen=16
+| search (PropertiesLIST="*User*" AND
+PropertiesLIST="*Public Information*" AND
+PropertiesLIST="*cn*" AND
+PropertiesLIST="*distinguishedName*" AND
+PropertiesLIST="*Group Membership*" AND
+PropertiesLIST="*member*" AND
+PropertiesLIST="*General Information*" AND
+PropertiesLIST="*primaryGroupID*" AND
+PropertiesLIST="*objectSid*" AND
+PropertiesLIST="*sAMAccountName*" AND
+PropertiesLIST="*sAMAccountType*" AND
+PropertiesLIST="*dNSHostName*" AND
+PropertiesLIST="*Account Restrictions*" AND
+PropertiesLIST="*userAccountControl*" AND
+PropertiesLIST="*objectClass*")
+```
+This should give a pretty good result.
 
 
 ## KERBEROASTING:
