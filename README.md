@@ -82,6 +82,12 @@ index=winevent_sec EventCode=4769 Service_Name=super_not_shady_SPN
 
 ## BLOODHOUND:
 
+Previous detection methods for bloodhound revolved around looking at large numbers of LDAP connections via network logs, however, that may have changed slightly given the recent developments from @cptjesus:
+
+> Ben Campbell @Meatballs__ pointed out that SharpHound spins up a large number of LDAP connections when doing enumeration, which causes a significant amount of overhead on building Kerberos handshakes. He provided an alternative solution which maintains a persistent LDAP connection. As of 2.0, SharpHound will use a cached LDAP connection to request resources which should speed up enumeration time in group enumeration at the very least, and possibly in more areas.
+
+If you were unable to log at this level (flat network) or someone was running the latest version of bloodhound, you may not be able to detect this in the standard way. Therefore the following is an interesting alternative.
+
 Some inspiration from http://www.stuffithoughtiknew.com/2019/02/detecting-bloodhound.html and help from @CTOBInsights with the Splunk query.
 
 When you run Bloodhound, you get the following events on your AD Security log after having configured logging on a particular canary user (see the link above): 
