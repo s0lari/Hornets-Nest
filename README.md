@@ -7,22 +7,22 @@ This repo will function as a repo for a number of resources/brain dumps that I c
 # CyberChef Recipes
 
 **Encrypt Strings in Group Policy Preference File format (useful for creating Honey xml files with amusing passwords that PowerSploit etc will decrypt - like the lyrics of a certain Rick Astley song...)**
-
+```
 Encode_text('UTF16LE (1200)')
 
 AES_Encrypt({'option':'Hex','string':'4e 99 06 e8  fc b6 6c c9  fa f4 93 10  62 0f fe e8 f4 96 e8 06  cc 05 79 90  20 9b 09 a4  33 b6 6c 1b'},{'option':'Hex','string':''},'CBC','Raw','Raw')
 
 To_Base64('A-Za-z0-9+/=')
-
+```
 
 **Decrypt Strings in Group Policy Preference File format (to check the above, as well as for offensive checks).**
-
+```
 From_Base64('A-Za-z0-9+/=',true)
 
 AES_Decrypt({'option':'Hex','string':'4e 99 06 e8  fc b6 6c c9  fa f4 93 10  62 0f fe e8 f4 96 e8 06  cc 05 79 90  20 9b 09 a4  33 b6 6c 1b'},{'option':'Hex','string':''},'CBC','Raw','Raw',{'option':'Hex','string':''})
 
 Decode_text('UTF16LE (1200)')
-
+```
 
 
 # Honey-all-the-things ideas
@@ -35,13 +35,14 @@ Get-GPPPassword searches a domain controller for groups.xml, scheduledtasks.xml,
 This can be used for our advantage by setting up a dummy GPO, or even just a basic xml file named something the above, with a value in it that contains a password of our own design. You would then set up auditing on this folder within SYSVOL on your domain, and alert if this particular file is accessed. 
 
 A baseline example xml file could be the following (from https://adsecurity.org/?p=384 )
+```
 <?xml version=”1.0″ encoding=”utf-8″?>
 <Groups clsid=”{3125E937-EB16-4b4c-9934-544FC6D24D26}”>
 <User clsid=”{DF5F1855-51E5-4d24-8B1A-D9BDE98BA1D1}” name=”LocalTestUser” image=”0″ changed=”2013-07-04 00:07:13″ uid=”{47F24835-4B58-4C48-A749-5747EAC84669}”>
 <Properties action=”C” fullName=”” description=”” cpassword=”sFWOJZOU7bJICaqvmd+KAEN0o4RcpxxMLWnK7s7zgNR+JiJwoSa+DLU3kAIdXc1WW5NKrIjIe9MIdBuJHvqFgbcNS873bDK2nbQBqpydkjbsPXV0HRPpQ96phie6N9tn4NF3KYyswokkDnj8gvuyZBXqoG94ML8M1Iq7/jhe37eHJiZGyi5IBoPuCfKpurj2″ changeLogon=”0″ noChange=”0″ neverExpires=”0″ acctDisabled=”0″ userName=”LocalTestUser”/>
 </User>
 </Groups>
-
+```
 You could use the cyberchef recipe at the top of this page to create a new string and enter that into the cpassword variable.
 
 Some example files : https://github.com/s0lari/Decoy-sploit
@@ -69,22 +70,25 @@ See Splunk Detections section for example query.
 ## Query for Splunk detections for Honey User
 
 (whitelist false positives as necessary)
+```
 index=winevent_sec EventCode="*"  user=xxxxxxxxx
-
+```
 ## Honey SPN for kerberoasting attack detection.
 (whitelist false positives as necessary)
+```
 index=winevent_sec EventCode=4769 Service_Name=super_not_shady_SPN
-
+```
 
 ## BLOODHOUND:
 
 Some inspiration from http://www.stuffithoughtiknew.com/2019/02/detecting-bloodhound.html
 
 Time period -eg 60 minutes
+```
 index=winevent_sec EventCode=4662  Accesses="Read Property"  (WHITELIST A SHEDLOAD OF SERVICE ACCOUNTS)
 | stats count by Account_Name
 | where count >x (where x is a good baseline)
-
+```
 This will give a pretty good result, however, if you look at event logs that come from running bloodhound, you can see that there are some other indicators we can alert on:
 
 ```
@@ -241,24 +245,26 @@ User
 **Adjust variables below and whitelist any users that are service accounts that are noisey. This is for any encryption type which allows for failures.**
 
 Time period -eg 60 minutes
+```
 index=winevent_sec EventCode=4769 Ticket_Options=0x40810000 Service_Name!="*$" Service_Name!="krbtgt" Account_Name!="*$@*"   | dedup Service_Name   | stats  count by user  | where  count>X (where x is a good baseline)
-
+```
 **Only for specific RC4 encrypted requested Kerberos requests – this is since they crack faster so are generally the hackers choice.**
-
+```
 index=winevent_sec EventCode=4769 Ticket_Options=0x40810000 Ticket_Encryption_Type=0x17 Service_Name!="*$" Service_Name!="krbtgt" Account_Name!="*$@*"   | dedup Service_Name   | stats  count by user  | where  count>X (where x is a good baseline)
-
+```
 ## DNS High Entropy Domain names - DGA Detection
+```
 | tstats count(DNS.dest) AS "Count of dest" from datamodel=Network_Resolution where (nodename = DNS) (DNS.query!="**copy and use this as whitelisting entry*")  groupby DNS.query, DNS.src prestats=true | stats dedup_splitvals=t count(DNS.dest) AS "CountD" by DNS.query, DNS.src | sort limit=25000 DNS.query | fields - _span | rename DNS.query AS query |rename DNS.src AS src| fillnull "CountD" | fields query, "CountD", src |where CountD=1 |eval list="mozilla"| `ut_parse(query, list)` | `ut_shannon(ut_domain)` | where ut_shannon>3.5 | table ut_shannon, query,  src | sort ut_shannon desc
-
+```
 ## Using Splunk Machine Learning Toolkit to show 'weird' destination ports - limited time lengths available depending on your result numbers.
 This will attempt to show anomalous destination ports and remove internal destination traffic from the results. Use case - C2 traffic to random hosts on random ports.
-
+```
 | tstats count AS "Count of All Traffic" from datamodel=Network_Traffic where (nodename = All_Traffic) groupby All_Traffic.user, All_Traffic.dest_ip, All_Traffic.src_ip, All_Traffic.dest_port, All_Traffic.src_port prestats=true | stats dedup_splitvals=t count AS "Count of All Traffic" by All_Traffic.user, All_Traffic.dest_ip, All_Traffic.src_ip, All_Traffic.dest_port, All_Traffic.src_port   | rename All_Traffic.user AS user All_Traffic.dest_ip AS dest_ip All_Traffic.src_ip AS src_ip All_Traffic.dest_port AS dest_port All_Traffic.src_port AS src_port | fillnull "Count of All Traffic" | fields  src_ip,src_port, user, dest_ip, dest_port,  "Count of All Traffic"| where (NOT cidrmatch("10.0.0.0/8",dest_ip) AND NOT cidrmatch("172.16.0.0/12",dest_ip) AND NOT   cidrmatch("192.168.0.0/16",dest_ip) AND NOT cidrmatch("10.blah.blah.blah/24",src_ip) AND cidrmatch("10.0.0.0/8",src_ip)) | anomalydetection  dest_port | sort - dest_port
-
+```
 ## Using Splunk Machine Learning Toolkit to show 'weird' connection pairs (rare) - limited time lengths available depending on your result numbers.
-
+```
 | tstats count AS "Count of All Traffic" from datamodel=Network_Traffic where (nodename = All_Traffic) groupby All_Traffic.user, All_Traffic.dest_ip, All_Traffic.src_ip, All_Traffic.dest_port, All_Traffic.src_port prestats=true | stats dedup_splitvals=t count AS "Count of All Traffic" by All_Traffic.user, All_Traffic.dest_ip, All_Traffic.src_ip, All_Traffic.dest_port, All_Traffic.src_port   | rename All_Traffic.user AS user All_Traffic.dest_ip AS dest_ip All_Traffic.src_ip AS src_ip All_Traffic.dest_port AS dest_port All_Traffic.src_port AS src_port | fillnull "Count of All Traffic" | fields  src_ip,src_port, user, dest_ip, dest_port,  "Count of All Traffic"| where (NOT cidrmatch("10.0.0.0/8",dest_ip) AND NOT cidrmatch("172.16.0.0/12",dest_ip) AND NOT   cidrmatch("192.168.0.0/16",dest_ip) AND NOT cidrmatch("10.blah.blah.blah/24",src_ip) AND cidrmatch("10.0.0.0/8",src_ip)) | anomalydetection  dest_ip | sort - dest_port
-
+```
 ## Defense in Depth Security stack
 
 Fundamentally you're going to be in a pretty good place if you manage these things in your environment - aims mainly at Windows Domain environements (brain dump, no priority/order as each environment is different, some are absolute must tho):
