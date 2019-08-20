@@ -87,6 +87,7 @@ index=winevent_sec EventCode=4662  Accesses="Read Property"  (WHITELIST A SHEDLO
 
 This will give a pretty good result, however, if you look at event logs that come from running bloodhound, you can see that there are some other indicators we can alert on:
 
+```
 Log Name:      Security
 Source:        Microsoft-Windows-Security-Auditing
 Date:          20/08/2019 09:00:29
@@ -113,24 +114,24 @@ Object:
 
 Operation:
 	Operation Type:		Object Access
-	Accesses:		Read Property
-				
+	Accesses:		Read Property	
 	Access Mask:		0x10
 	Properties:		Read Property
-		**General Information
+		General Information
 			sAMAccountType
 			primaryGroupID
 		Account Restrictions
 			userAccountControl
 		Public Information
 			objectClass
-	User**
+	User
 
 
 Additional Information:
 	Parameter 1:		-
 	Parameter 2:		
-
+```
+```
 Log Name:      Security
 Source:        Microsoft-Windows-Security-Auditing
 Date:          20/08/2019 09:00:29
@@ -161,7 +162,7 @@ Operation:
 				
 	Access Mask:		0x10
 	Properties:		Read Property
-	**User
+	User
 		Public Information
 			cn
 			distinguishedName
@@ -173,17 +174,40 @@ Operation:
 			sAMAccountName
 			sAMAccountType
 		dNSHostName
-			dNSHostName**
+			dNSHostName
 
 
 Additional Information:
 	Parameter 1:		-
 	Parameter 2:		
+```
 
 Using these properties lookups can function like a fingerprint for BloodHound activity - there are a lot of Active Directory queries and operations that query AD attributes and properties that are not in these forms, so you can use this to remove false positives.
 
+Properties:		Read Property
+	User
+		Public Information
+			cn
+			distinguishedName
+		Group Membership
+			member
+		General Information
+			primaryGroupID
+			objectSid
+			sAMAccountName
+			sAMAccountType
+		dNSHostName
+			dNSHostName
 
-
+Properties:		Read Property
+		General Information
+			sAMAccountType
+			primaryGroupID
+		Account Restrictions
+			userAccountControl
+		Public Information
+			objectClass
+	User
 
 ## KERBEROASTING:
 
