@@ -184,6 +184,8 @@ Additional Information:
 
 Using these properties lookups can function like a fingerprint for BloodHound activity - there are a lot of Active Directory queries and operations that query AD attributes and properties that are not in these forms, so you can use this to remove false positives.
 
+
+**LOOKUP EVENT 1**
 Properties:	Read Property
 User
 
@@ -211,6 +213,7 @@ dNSHostName
 
 dNSHostName
 
+**LOOKUP EVENT 2**
 
 Properties:	Read Property
 
