@@ -249,6 +249,9 @@ index=winevent_sec EventCode=4662 Accesses="Read Property"
 | rex field=_raw "(?<PropertiesLIST>(?s)(?<=Properties:).+?(?=Additional))" 
 | eval PropertiesLIST=replace(PropertiesLIST, "[\n\r]",";") 
 | makemv delim=";" PropertiesLIST 
+| stats count values(PropertiesLIST) as PropertiesLIST by user 
+| eval propertyLen=mvcount(PropertiesLIST) 
+| where propertyLen=16
 | search (PropertiesLIST="*User*" AND
 PropertiesLIST="*Public Information*" AND
 PropertiesLIST="*cn*" AND
@@ -265,9 +268,6 @@ PropertiesLIST="*Account Restrictions*" AND
 PropertiesLIST="*userAccountControl*" AND
 PropertiesLIST="*objectClass*" AND
 PropertiesLIST="*Read Property*")
-| stats count values(PropertiesLIST) as PList by user 
-| eval propertyLen=mvcount(PList) 
-| where propertyLen>1
 ```
 This should give a pretty good result.
 
