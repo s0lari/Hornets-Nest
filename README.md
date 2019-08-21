@@ -369,7 +369,35 @@ Additional Information:
 
 ```
 
-Computer account collection methods should now be covered too with the same query as above.
+
+
+Computer account collection methods should now be covered too with the query below (basically the same as the above, just minus the 'user' propertiesList entry.
+
+Time period -eg 60 minutes
+```
+index=winevent_sec EventCode=4662 Accesses="Read Property" 
+| rex field=_raw "(?<PropertiesLIST>(?s)(?<=Properties:).+?(?=Additional))" 
+| eval PropertiesLIST=replace(PropertiesLIST, "[\n\r]",";") 
+| makemv delim=";" PropertiesLIST 
+| stats count values(PropertiesLIST) as PropertiesLIST by user 
+| eval propertyLen=mvcount(PropertiesLIST) 
+| where propertyLen=15
+| search (PropertiesLIST="*Public Information*" AND
+PropertiesLIST="*cn*" AND
+PropertiesLIST="*distinguishedName*" AND
+PropertiesLIST="*Group Membership*" AND
+PropertiesLIST="*member*" AND
+PropertiesLIST="*General Information*" AND
+PropertiesLIST="*primaryGroupID*" AND
+PropertiesLIST="*objectSid*" AND
+PropertiesLIST="*sAMAccountName*" AND
+PropertiesLIST="*sAMAccountType*" AND
+PropertiesLIST="*dNSHostName*" AND
+PropertiesLIST="*Account Restrictions*" AND
+PropertiesLIST="*userAccountControl*" AND
+PropertiesLIST="*objectClass*" AND
+PropertiesLIST="*Read Property*")
+```
 
 
 ## KERBEROASTING:
