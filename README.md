@@ -702,7 +702,10 @@ https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA
  
 Various CTF and hack related things.
 https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w/videos?disable_polymer=1
- 
+
+Fun way to learn Regex
+https://regexcrossword.com/
+
 ## Podcasts 
   
 Purple Squad Security - Purple Team podcast
