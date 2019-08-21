@@ -269,7 +269,107 @@ PropertiesLIST="*userAccountControl*" AND
 PropertiesLIST="*objectClass*" AND
 PropertiesLIST="*Read Property*")
 ```
-This should give a pretty good result.
+This should give a pretty good result for user based Bloodhound detection, but in order to detect computer based checks, a similar setup will need to be created, except with a canary computer account. This can be done simply by creating a new computer object in the 'computers' OU in Active Directory Users and Computers, then applying the same auditing rules that are configured as the canary/honey user. This will create the same Event Code 4662 logs:
+
+```
+Log Name:      Security
+Source:        Microsoft-Windows-Security-Auditing
+Date:          21/08/2019 09:11:17
+Event ID:      4662
+Task Category: Directory Service Access
+Level:         Information
+Keywords:      Audit Success
+User:          N/A
+Computer:      dc1.internal.blah123.com
+Description:
+An operation was performed on an object.
+
+Subject :
+	Security ID:		INTERNAL\Administrator
+	Account Name:		Administrator
+	Account Domain:		INTERNAL
+	Logon ID:		0xB57C7
+
+Object:
+	Object Server:		DS
+	Object Type:		computer
+	Object Name:		CN=Canary,CN=Computers,DC=internal,DC=blah123,DC=com
+	Handle ID:		0x0
+
+Operation:
+	Operation Type:		Object Access
+	Accesses:		Read Property
+				
+	Access Mask:		0x10
+	Properties:		Read Property
+	Public Information
+		Public Information
+				cn
+			distinguishedName
+		Group Membership
+				member
+		General Information
+				primaryGroupID
+			objectSid
+			sAMAccountName
+			sAMAccountType
+		dNSHostName
+			dNSHostName
+
+
+Additional Information:
+	Parameter 1:		-
+	Parameter 2:	
+
+```
+```
+Log Name:      Security
+Source:        Microsoft-Windows-Security-Auditing
+Date:          21/08/2019 09:11:17
+Event ID:      4662
+Task Category: Directory Service Access
+Level:         Information
+Keywords:      Audit Success
+User:          N/A
+Computer:      dc1.internal.blah123.com
+Description:
+An operation was performed on an object.
+
+Subject :
+	Security ID:		INTERNAL\Administrator
+	Account Name:		Administrator
+	Account Domain:		INTERNAL
+	Logon ID:		0xB57C7
+
+Object:
+	Object Server:		DS
+	Object Type:		computer
+	Object Name:		CN=Canary,CN=Computers,DC=internal,DC=blah123,DC=com
+	Handle ID:		0x0
+
+Operation:
+	Operation Type:		Object Access
+	Accesses:		Read Property
+				
+	Access Mask:		0x10
+	Properties:		Read Property
+		General Information
+			sAMAccountType
+				primaryGroupID
+		Account Restrictions
+			userAccountControl
+		Public Information
+			objectClass
+	Public Information
+
+
+Additional Information:
+	Parameter 1:		-
+	Parameter 2:		
+
+```
+
+Computer account collection methods should now be covered too with the same query as above.
 
 
 ## KERBEROASTING:
