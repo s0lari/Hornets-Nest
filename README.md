@@ -504,6 +504,9 @@ https://www.amazon.co.uk/Blue-Team-Handbook-condensed-Operations/dp/1726273989/r
 General Overall Security book - not hugely in depth but wide.
 https://www.amazon.co.uk/Defensive-Security-Handbook-Lee-Brotherston/dp/1491960388/ref=sr_1_fkmrnull_1?crid=3SX1IOK1H2R6O&keywords=defensive+security+handbook&qid=1552653330&s=gateway&sprefix=defensive+secur%2Cdigital-text%2C185&sr=8-1-fkmrnull
 
+Several techniques and tools for collecting and analyzing network traffic datasets.
+https://www.amazon.co.uk/Network-Security-Through-Data-Analysis/dp/1491962844/ref=dp_ob_title_bk
+
 CanaryTokens (Various Canary token type generators)
 https://canarytokens.org/generate
  
