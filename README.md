@@ -638,6 +638,12 @@ https://www.scythe.io/platform
 Complete Mandiant Offensive VM (Commando VM), the first full Windows-based penetration testing virtual machine distribution. Good for attacking windows Active directory based environments.
 https://www.fireeye.com/blog/threat-research/2019/03/commando-vm-windows-offensive-distribution.html
 
+Web App Pentesting checks
+https://www.amanhardikar.com/mindmaps/webapptest.html
+
+SQL Injection checks
+https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/
+
 
 ## Digital Forensics
 
