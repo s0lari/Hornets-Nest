@@ -28,6 +28,8 @@ Decode_text('UTF16LE (1200)')
 
 # Honey-all-the-things ideas
 
+One of the best videos i've ever watched on cyber-deception in AD : https://www.youtube.com/watch?v=vLWGJ3f3-gI
+
 ## Powersploit landmine:
 Powersploit has a script called "Get-GPPPassword" - this file does the following:
 
