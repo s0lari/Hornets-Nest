@@ -473,7 +473,7 @@ This will attempt to show anomalous destination ports and remove internal destin
 | fillnull "Count of Web" 
 | fields http_user_agent, dest, url, src, "Count of Web" 
 | anomalydetection http_user_agent 
-| sort - http_user_agent
+| sort + "Count of Web"
 ```
 
 
