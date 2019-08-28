@@ -697,6 +697,8 @@ https://www.amanhardikar.com/mindmaps/webapptest.html
 SQL Injection checks
 https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/
 
+Cheatsheet for kerberos attacks(lots of methods).
+https://gist.github.com/TarlogicSecurity/2f221924fef8c14a1d8e29f3cb5c5c4a
 
 ## Digital Forensics
 
