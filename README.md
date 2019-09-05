@@ -701,6 +701,7 @@ Cheatsheet for kerberos attacks(lots of methods).
 https://gist.github.com/TarlogicSecurity/2f221924fef8c14a1d8e29f3cb5c5c4a
 
 https://github.com/Greenwolf/social_mapper
+
 Social Mapper is an Open Source Intelligence Tool that uses facial recognition to correlate social media profiles across different sites on a large scale. It takes an automated approach to search popular social media sites for targets' names and pictures to accurately detect and group a person’s presence, outputting the results into report that a human operator can quickly review.
 
 ## Digital Forensics
