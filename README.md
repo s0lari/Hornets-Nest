@@ -28,6 +28,14 @@ Decode_text('UTF16LE (1200)')
 
 # Honey-all-the-things ideas
 
+Before looking into these interesting fun things to do - you absolutely must have good AD configuration in place. A couple of helpful examples:
+
+https://adsecurity.org/?page_id=4031
+
+https://adsecurity.org/wp-content/uploads/2019/09/2019-DerbyCon-ActiveDirectorySecurity-BeyondTheEasyButton-Metcalf.pdf 
+
+Unfortunately this isn't always possible due to internal politics in a company, rejected changes, or 100 other reasons - which is where the below becomes more of use. 
+
 One of the best videos i've ever watched on cyber-deception in AD : https://www.youtube.com/watch?v=vLWGJ3f3-gI
 
 ## Powersploit landmine:
@@ -596,6 +604,7 @@ https://www.labofapenetrationtester.com/2018/10/deploy-deception.html
 *Mandatory if you're securing AD* - Securing Active Directory, Beyond the Easy Button - Sean Metcalf @ Derbycon 2019
 
 https://adsecurity.org/wp-content/uploads/2019/09/2019-DerbyCon-ActiveDirectorySecurity-BeyondTheEasyButton-Metcalf.pdf
+
 Acommpanying video recording :
 
 https://youtu.be/AZScrF6JxeQ?t=87
