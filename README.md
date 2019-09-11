@@ -577,7 +577,9 @@ Sigma rules for splunk (200 use cases various - MITRE ATT&CK Matrix based )
 
 https://github.com/Neo23x0/sigma
 
- 
+YARA Rule generator
+
+https://github.com/Neo23x0/yarGen
 
 Saved Searches file for above SIGMA rules:
 
