@@ -592,6 +592,14 @@ https://github.com/OWASP/CheatSheetSeries
 Some good Active Directory Deception ideas
 
 https://www.labofapenetrationtester.com/2018/10/deploy-deception.html
+
+*Mandatory if you're securing AD* - Securing Active Directory, Beyond the Easy Button - Sean Metcalf @ Derbycon 2019
+
+https://adsecurity.org/wp-content/uploads/2019/09/2019-DerbyCon-ActiveDirectorySecurity-BeyondTheEasyButton-Metcalf.pdf
+Acommpanying video recording :
+
+https://youtu.be/AZScrF6JxeQ?t=87
+
  
 
 ## Purple Team
