@@ -592,6 +592,9 @@ https://github.com/Yara-Rules/rules
 Procfilter - active scanner using yara rules.
 https://github.com/godaddy/procfilter
 
+OSQuery - supports Yara rules.
+https://osquery.io/
+
 
  
 
