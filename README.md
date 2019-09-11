@@ -577,6 +577,10 @@ Sigma rules for splunk (200 use cases various - MITRE ATT&CK Matrix based )
 
 https://github.com/Neo23x0/sigma
 
+Saved Searches file for above SIGMA rules:
+
+https://github.com/dstaulcu/TA-Sigma-Searches/blob/master/default/savedsearches.conf 
+
 YARA Rule generator
 
 https://github.com/Neo23x0/yarGen
@@ -585,9 +589,9 @@ YARA Rules
 
 https://github.com/Yara-Rules/rules
 
-Saved Searches file for above SIGMA rules:
+Procfilter - active scanner using yara rules.
+https://github.com/godaddy/procfilter
 
-https://github.com/dstaulcu/TA-Sigma-Searches/blob/master/default/savedsearches.conf 
 
  
 
