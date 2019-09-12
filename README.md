@@ -590,9 +590,11 @@ YARA Rules
 https://github.com/Yara-Rules/rules
 
 Procfilter - active scanner using yara rules.
+
 https://github.com/godaddy/procfilter
 
 OSQuery - supports Yara rules.
+
 https://osquery.io/
 
 Open source Threat intelligence sharing platform
@@ -600,7 +602,17 @@ Open source Threat intelligence sharing platform
 https://www.misp-project.org/
 
 Another Threat intelligence sharing platform
+
 https://www.riskiq.com/products/community-edition/
+
+Yet another threat intelligence platform
+
+https://www.threatminer.org/
+
+Open source malware sandboxes:
+https://www.virustotal.com
+https://www.hybrid-analysis.com/
+https://any.run
 
 Recommended EDR (commercial):
 
