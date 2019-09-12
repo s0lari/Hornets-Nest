@@ -595,8 +595,12 @@ https://github.com/godaddy/procfilter
 OSQuery - supports Yara rules.
 https://osquery.io/
 
+Open source Threat intelligence sharing platform
 
- 
+https://www.misp-project.org/
+
+Another Threat intelligence sharing platform
+https://www.riskiq.com/products/community-edition/
 
 Recommended EDR (commercial):
 
