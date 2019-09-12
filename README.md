@@ -626,6 +626,10 @@ Acommpanying video recording :
 
 https://youtu.be/AZScrF6JxeQ?t=87
 
+
+A 4-IN-1 SECURITY INCIDENT RESPONSE PLATFORM
+https://thehive-project.org/
+
  
 
 ## Purple Team
