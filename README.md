@@ -529,46 +529,61 @@ Fundamentally you're going to be in a pretty good place if you manage these thin
 ## Blue Team & Threat Hunting
 
 SANS Blue team wiki - helpful cheat sheets & Reference
+
 https://wiki.sans.blue/#!index.md
  
 Amazing site for which windows events to log and why.
+
 https://www.malwarearchaeology.com/cheat-sheets
+
 https://www.malwarearchaeology.com/logging
  
 Site dedicated to active directory security - red team benefits : know what to target.
+
 https://adsecurity.org/
  
 Mitre Attack based SIEM rules (multi format)
+
 https://github.com/Neo23x0/sigma
  
 Creator of HELK (Hunting ELK Stack) and the threat hunting playbook
+
 https://github.com/Cyb3rWard0g
  
 Guide to setting up enterprise wide SYSMON threat hunting/logging
+
 https://securityaffairs.co/wordpress/81288/security/hunting-mitres-attck-splunk.html
  
 Threat Hunting Splunk App (SYSMON necessary, Mitre Attack based)
+
 https://github.com/olafhartong/ThreatHunting
  
 SANS SIEM (Security configured ELK stack)
+
 https://github.com/philhagen/sof-elk
  
 Book on developing SOC and SIEM - includes working with the business ( very good material here).
+
 https://www.amazon.co.uk/Blue-Team-Field-Manual-BTFM/dp/154101636X/ref=pd_lpo_sbs_14_t_1?_encoding=UTF8&psc=1&refRID=WWDBBTYX9KR3Z7MY9CDP
  
 Good blueteam/IR handbook (Less concise, but more theory added)
+
 https://www.amazon.co.uk/Blue-Team-Handbook-condensed-Operations/dp/1726273989/ref=sr_1_2?qid=1552652679&refinements=p_27%3ADon+Murdoch+GSE&s=books&sr=1-2&text=Don+Murdoch+GSE
  
 General Overall Security book - not hugely in depth but wide.
+
 https://www.amazon.co.uk/Defensive-Security-Handbook-Lee-Brotherston/dp/1491960388/ref=sr_1_fkmrnull_1?crid=3SX1IOK1H2R6O&keywords=defensive+security+handbook&qid=1552653330&s=gateway&sprefix=defensive+secur%2Cdigital-text%2C185&sr=8-1-fkmrnull
 
 Several techniques and tools for collecting and analyzing network traffic datasets.
+
 https://www.amazon.co.uk/Network-Security-Through-Data-Analysis/dp/1491962844/ref=dp_ob_title_bk
 
 CanaryTokens (Various Canary token type generators)
+
 https://canarytokens.org/generate
  
 "The MaGMa framework was designed specifically to support the use case management process. The tool provides a very practical and flexible approach to managing use cases in any security monitoring environment, from simple to complex. In total, 12 L1 use cases, 62 L2 use cases and 169 L3 use cases have been predefined in the tool, giving organizations a jumpstart in use case management.” Use cases are MITRE ATT&CK Matrix based."
+
 https://www.linkedin.com/pulse/magma-use-case-framework-released-today-rob-van-os
 
  
@@ -610,6 +625,7 @@ Yet another threat intelligence platform
 https://www.threatminer.org/
 
 Open source malware sandboxes:
+
 https://www.virustotal.com
 
 https://www.hybrid-analysis.com/
@@ -623,9 +639,11 @@ https://www.carbonblack.com/products/cb-threathunter/
 https://www.endgame.com/platform
  
 OWASP Project
+
 https://www.owasp.org/index.php/Main_Page
  
 OWASP Cheat sheets
+
 https://github.com/OWASP/CheatSheetSeries
 
 Some good Active Directory Deception ideas
@@ -642,50 +660,66 @@ https://youtu.be/AZScrF6JxeQ?t=87
 
 
 A 4-IN-1 SECURITY INCIDENT RESPONSE PLATFORM
+
 https://thehive-project.org/
 
  
 
 ## Purple Team
+
 List of common attacks. 
+
 https://attack.mitre.org/
  
 Adversary Emulation tools list
+
 http://pentestit.com/adversary-emulation-tools-list/
  
 Large list of IR tools and resources
+
 https://github.com/meirwah/awesome-incident-response
  
 Black Hills information security - awesome company that give away a tonne of free resources and tools.
+
 https://www.blackhillsinfosec.com/blog/
+
 https://www.youtube.com/channel/UCJ2U9Dq9NckqHMbcUupgF0A (bhis youtube channel)
  
 Great tool to keep track of gap analysis of environment mapped to the MITRE attack matrix
+
 https://nsacyber.github.io/unfetter/
  
 Good blueteam/IR handbook (Very concise - more a list of commands and why)
+
 https://www.amazon.co.uk/Blue-Team-Handbook-condensed-Responder/dp/1500734756
  
 Pretty much the definitive go to guide for DFIR.
+
 https://www.amazon.co.uk/Incident-Response-Computer-Forensics-Third-ebook/dp/B00JFG7152
  
 Dehashed (DeHashed is a hacked database search engine created for security analysts, journalists, security companies, and everyday people to help secure accounts and provide insight on database breaches and account leaks.)
+
 https://dehashed.com
  
 HaveIBeenPwned (domain search)
+
 https://haveibeenpwned.com/DomainSearch
  
 One of the best if not the best site for the OSINT topic.
+
 https://inteltechniques.com
  
 A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cli/web tools and more.
+
 https://github.com/trimstray/the-book-of-secret-knowledge/blob/master/README.md
  
 MITRE ATT&CK Testing framework
+
 https://redcanary.com/atomic-red-team/
  
  
 Purple Team ATT&CK™ Automation
+
 https://github.com/praetorian-code/purple-team-attack-automation
  
 A datasource assessment on an event level to show potential ATT&CK coverage
@@ -694,21 +728,27 @@ https://github.com/olafhartong/ATTACKdatamap
 
  
 Applying a Threat Based Approach to Security Testing (great article on red team/purple team)
+
 https://threatexpress.com/blogs/2018/threat-gets-a-vote-applying-a-threat-based-approach-to-security-testing/
 Threat Mitigation Strategies: Part 1
+
 https://threatexpress.com/blogs/2018/threat-mitigation-strategies-observations-recommendations/
 Threat Mitigation Strategies: Part 2 (great collated list of 'wins' relating to previous two articles)
+
 https://threatexpress.com/blogs/2018/threat-mitigation-strategies-technical-recommendations-and-info-part-2/
  
 Purple/Red team security tool validation system (adversary simulation - commercial license)
+
 https://www.scythe.io/platform
  
 Complete Mandiant Offensive VM (Commando VM), the first full Windows-based penetration testing virtual machine distribution. Good for attacking windows Active directory based environments.
+
 https://www.fireeye.com/blog/threat-research/2019/03/commando-vm-windows-offensive-distribution.html
  
 ## Red Team
  
 Great list of resources/tools in Attack-chain categories
+
 https://github.com/infosecn1nja/Red-Teaming-Toolkit
  
 A huge list of useful payloads and bypasses
@@ -717,42 +757,60 @@ https://github.com/swisskyrepo/PayloadsAllTheThings
 
  
 Great list of resources/tools in Attack-chain categories (more)
+
 https://github.com/yeyintminthuhtut/Awesome-Red-Teaming
  
 Gap analysis tool containing scripts to test various MITRE attack rules.
+
 https://github.com/redcanaryco/atomic-red-team
  
 Same as the Blue team field manual - but for the Red Team (join the dark side -they have cookies).
+
 https://www.amazon.co.uk/Rtfm-Red-Team-Field-Manual/dp/1494295504/ref=pd_lpo_sbs_14_t_0?_encoding=UTF8&psc=1&refRID=WWDBBTYX9KR3Z7MY9CDP
  
 Great book detailing hacker playbooks tools and techniques.
+
 https://www.amazon.co.uk/Hacker-Playbook-Practical-Penetration-Testing/dp/1980901759/ref=pd_sim_14_4/260-2231008-3826148?_encoding=UTF8&pd_rd_i=1980901759&pd_rd_r=21b93499-471d-11e9-abbc-f52bf6129af9&pd_rd_w=jwkcz&pd_rd_wg=W97Hb&pf_rd_p=1b8636ae-4f21-4403-a813-e8849dd46de4&pf_rd_r=WWDBBTYX9KR3Z7MY9CDP&psc=1&refRID=WWDBBTYX9KR3Z7MY9CDP
  
 Great 'scenario' based book on hacking networks of various types and kinds. 
+
 https://www.amazon.co.uk/Advanced-Penetration-Testing-Hacking-Networks-ebook/dp/B06XCKTKK8/ref=pd_sim_351_7?_encoding=UTF8&pd_rd_i=B06XCKTKK8&pd_rd_r=8263cbb8-471e-11e9-917c-7de6dac306e9&pd_rd_w=TKxVS&pd_rd_wg=MmoJA&pf_rd_p=1b8636ae-4f21-4403-a813-e8849dd46de4&pf_rd_r=ZWBWAA765VN3BG379JQA&psc=1&refRID=ZWBWAA765VN3BG379JQA
  
 Pentesting book with practical labs.
+
 https://www.amazon.co.uk/Penetration-Testing-Hands-Introduction-Hacking-ebook/dp/B00KME7GN8
  
 Cutting-edge techniques for finding and fixing critical security flaws
+
 https://www.amazon.co.uk/Gray-Hat-Hacking-Ethical-Handbook-ebook/dp/B07D3J9J4H/ref=sr_1_1?keywords=grey+hat+hacking&qid=1556278379&s=digital-text&sr=1-1-catcorr
  
 Purple/Red team security tool validation system (adversary simulation)
+
 https://www.scythe.io/platform
  
 Complete Mandiant Offensive VM (Commando VM), the first full Windows-based penetration testing virtual machine distribution. Good for attacking windows Active directory based environments.
+
 https://www.fireeye.com/blog/threat-research/2019/03/commando-vm-windows-offensive-distribution.html
 
 Web App Pentesting checks
+
 https://www.amanhardikar.com/mindmaps/webapptest.html
 
 SQL Injection checks
+
 https://www.netsparker.com/blog/web-security/sql-injection-cheat-sheet/
 
 Cheatsheet for kerberos attacks(lots of methods).
+
 https://gist.github.com/TarlogicSecurity/2f221924fef8c14a1d8e29f3cb5c5c4a
 
 Social Mapper is an Open Source Intelligence Tool that uses facial recognition to correlate social media profiles across different sites on a large scale. It takes an automated approach to search popular social media sites for targets' names and pictures to accurately detect and group a person’s presence, outputting the results into report that a human operator can quickly review. https://github.com/Greenwolf/social_mapper
+
+Mindmap of offensive assessment mindset. (Pentests, CTF, Bug Bounty etc) 
+
+
+https://github.com/dsopas/assessment-mindset
+
 
 
 
