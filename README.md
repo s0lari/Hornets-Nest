@@ -747,6 +747,10 @@ https://www.fireeye.com/blog/threat-research/2019/03/commando-vm-windows-offensi
  
 ## Red Team
  
+Pentest Cheat Sheets
+
+https://ired.team/offensive-security-experiments/offensive-security-cheetsheets
+
 Great list of resources/tools in Attack-chain categories
 
 https://github.com/infosecn1nja/Red-Teaming-Toolkit
