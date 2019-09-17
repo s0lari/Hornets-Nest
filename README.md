@@ -432,22 +432,38 @@ index=winevent_sec EventCode=4769 Ticket_Options=0x40810000 Ticket_Encryption_Ty
 ```
 ## DNS High Entropy Domain names - DGA Detection
 ```
-| tstats count(DNS.dest) AS "Count of dest" from datamodel=Network_Resolution where (nodename = DNS) (DNS.query!="**copy and use this as whitelisting entry*") groupby DNS.query, DNS.src prestats=true 
+| tstats count(DNS.dest) AS "Count of dest" from datamodel=Network_Resolution where (nodename = DNS) NOT DNS.query IN ("**X.com*", "**Y.COM*", "**Z.COM*",) groupby DNS.query, DNS.src prestats=true 
 | stats dedup_splitvals=t count(DNS.dest) AS "CountD" by DNS.query, DNS.src 
-| sort limit=25000 DNS.query 
-| fields - _span 
-| rename DNS.query AS query 
-| rename DNS.src AS src 
+| sort limit=0 DNS.query 
+| rename DNS.query AS query DNS.src AS src 
 | fillnull "CountD" 
-| fields query, "CountD", src 
+| fields query, "CountD", src, - _span  
 | where CountD=1 
 | eval list="mozilla" 
 | `ut_parse(query, list)` 
 | `ut_shannon(ut_domain)` 
 | where ut_shannon>3.5 
-| table ut_shannon, query, src 
+| lookup ad_assets_lookup_tracker.csv ip as src OUTPUT dns as src-resolved
+| table ut_shannon, query, src, src-resolved 
 | sort ut_shannon desc
 ```
+## DNS High Entropy Domain Names with Count - DGA Detection
+```
+| tstats count(DNS.dest) AS "Count of dest" from datamodel=Network_Resolution where (nodename = DNS) ("**X.com*", "**Y.COM*", "**Z.COM*",) groupby DNS.query, DNS.src prestats=true 
+| stats dedup_splitvals=t count(DNS.dest) AS "CountD" by DNS.query, DNS.src 
+| sort limit=0 DNS.query 
+| rename DNS.query AS query DNS.src AS src
+| fillnull "CountD" 
+| fields query, "CountD", src, - _span
+| where CountD=1 
+| eval list="mozilla" 
+| `ut_parse(query, list)` 
+| `ut_shannon(ut_domain)` 
+| where ut_shannon>3.5
+| lookup assets.csv ip as src OUTPUT dns as src-resolved
+| stats count as qcount values(ut_shannon) by query
+```
+
 ## Using Splunk Machine Learning Toolkit to show 'weird' destination ports - limited time lengths available depending on your result numbers.
 This will attempt to show anomalous destination ports and remove internal destination traffic from the results. Use case - C2 traffic to random hosts on random ports.
 ```
