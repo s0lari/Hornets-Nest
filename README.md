@@ -24,13 +24,14 @@ AES_Decrypt({'option':'Hex','string':'4e 99 06 e8  fc b6 6c c9  fa f4 93 10  62 
 
 Decode_text('UTF16LE (1200)')
 ```
-**Emotet Word Doc Powershell Script - makes reading easier - pause certain elements to make the code work though.**
+**Emotet Word Doc Powershell Script - makes reading easier - pause certain elements to make the code executable.**
 ```
 From_Base64('A-Za-z0-9+/=',true)
 Decode_text('UTF16LE (1200)')
 CSS_Beautify('\\t')
 Find_/_Replace({'option':'Regex','string':';'},'\\n',true,false,true,false)
 Find_/_Replace({'option':'Regex','string':'`'},'',true,false,true,false)
+Find_/_Replace({'option':'Regex','string':'\\\'\\+\\\''},'',true,false,true,false)
 To_Lower_case()
 ```
 
