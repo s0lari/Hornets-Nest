@@ -565,7 +565,7 @@ https://www.malwarearchaeology.com/cheat-sheets
 
 https://www.malwarearchaeology.com/logging
  
-A good little program that audits your computers logging capabilities against best practices.
+A good little program that audits your computers logging capabilities against best practices as well as numerous other functions.
 
 https://www.imfsecurity.com/why-log-md
  
