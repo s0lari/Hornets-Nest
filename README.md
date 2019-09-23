@@ -565,6 +565,10 @@ https://www.malwarearchaeology.com/cheat-sheets
 
 https://www.malwarearchaeology.com/logging
  
+A good little program that audits your computers logging capabilities against best practices.
+
+https://www.imfsecurity.com/why-log-md
+ 
 Site dedicated to active directory security - red team benefits : know what to target.
 
 https://adsecurity.org/
