@@ -32,6 +32,8 @@ CSS_Beautify('\\t')
 Find_/_Replace({'option':'Regex','string':';'},'\\n',true,false,true,false)
 Find_/_Replace({'option':'Regex','string':'`'},'',true,false,true,false)
 Find_/_Replace({'option':'Regex','string':'\\\'\\+\\\''},'',true,false,true,false)
+Find_/_Replace({'option':'Regex','string':'\\+\\\''},'',true,false,true,false)
+Find_/_Replace({'option':'Regex','string':'\\\'\\+'},'',true,false,true,false)
 To_Lower_case()
 ```
 
