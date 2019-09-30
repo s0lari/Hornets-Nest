@@ -474,7 +474,33 @@ index=winevent_sec EventCode=4769 Ticket_Options=0x40810000 Ticket_Encryption_Ty
 | lookup assets.csv ip as src OUTPUT dns as src-resolved
 | stats count as qcount values(ut_shannon) by query
 ```
-
+## DNS Beaconing Queries by connection count and deviation (Credit to @olafhartong for this query from his ThreatHunting app - adjusted for use for generic DNS lookups such as from centralised AD with many DNS servers - not as useful as having it per individual device, but better than nothing)
+```
+index=*dns*
+| eval current_time=_time
+| sort 0 + current_time
+| streamstats global=f window=2 current=f last(current_time) AS previous_time by host, query
+| eval diff_time=current_time-previous_time
+| eventstats count, stdev(diff_time) AS std by host, query
+| where std<5 AND count>50
+| stats count AS conn_count, dc(host) AS unique_sources, values(std) AS diff_deviation, values(category) AS category BY query
+```
+## Beaconing Queries by time delta(Credit to @olafhartong for this query from his ThreatHunting app - adjusted for use for generic DNS lookups such as from centralised AD with many DNS servers - not as useful as having it per individual device, but better than nothing)
+```
+index=*dns*
+| fields host, query, _time 
+| fields - _raw 
+| sort 0 query,host,-_time
+| streamstats current=f window=1 first(_time) as next_query by query, host
+| eval delta=round(abs(next_query-_time),0)
+| search delta>0 
+| search  query!="None"
+| stats count as query_count dc(delta) as delta_dc by query
+| eval num_requests_per_time_delta=query_count/delta_dc
+| where num_requests_per_time_delta >= 5
+| sort 500 - query_count
+| table query num_requests_per_time_delta query_count
+```
 ## Using Splunk Machine Learning Toolkit to show 'weird' destination ports - limited time lengths available depending on your result numbers.
 This will attempt to show anomalous destination ports and remove internal destination traffic from the results. Use case - C2 traffic to random hosts on random ports.
 ```
