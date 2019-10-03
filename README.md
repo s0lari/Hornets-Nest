@@ -3,7 +3,18 @@ This repo will function as a repo for a number of resources/brain dumps that I c
 
 This is my effort at giving back to the security community- ill try to keep it tidy! ;)
 
+**INDEX:**
+
+<a href=https://github.com/s0lari/Hornets-Nest#cyberchef-recipes>CyberChef Recipes</a>
+
 <a href=https://github.com/s0lari/Hornets-Nest/blob/master/README.md#honey-all-the-things-ideas>Honey All the things Ideas</a>
+
+<a href=https://github.com/s0lari/Hornets-Nest#splunk-detections>Splunk Detections</a>
+
+<a href=https://github.com/s0lari/Hornets-Nest#defense-in-depth-security-stack>Defence in Depth Stack</a>
+
+<a href=https://github.com/s0lari/Hornets-Nest#security-resources---links-books-ctfs-etc>Security Resources - Links, Books, Podcasts</a>
+
 
 # CyberChef Recipes
 
@@ -540,7 +551,7 @@ This will attempt to show anomalous destination ports and remove internal destin
 ```
 
 
-## Defense in Depth Security stack
+# Defense in Depth Security stack
 
 Fundamentally you're going to be in a pretty good place if you manage these things in your environment - aims mainly at Windows Domain environements (brain dump, no priority/order as each environment is different, some are absolute must tho):
 
