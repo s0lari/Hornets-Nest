@@ -807,7 +807,10 @@ https://www.fireeye.com/blog/threat-research/2019/03/commando-vm-windows-offensi
 Massive collated list of attacks etc
 
 https://m0chan.github.io/2019/07/30/Windows-Notes-and-Cheatsheet.html
+
 https://m0chan.github.io/2018/07/31/Linux-Notes-And-Cheatsheet.html
+
+https://github.com/m0chan/h4cks
  
 Pentest Cheat Sheets
 
