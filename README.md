@@ -7,7 +7,7 @@ This is my effort at giving back to the security community- ill try to keep it t
 
 <a href=https://github.com/s0lari/Hornets-Nest#cyberchef-recipes>CyberChef Recipes</a>
 
-<a href=https://github.com/s0lari/Hornets-Nest/blob/master/README.md#honey-all-the-things-ideas>Honey All the things Ideas</a>
+<a href=https://github.com/s0lari/Hornets-Nest/blob/master/README.md#honey-all-the-things-ideas>Honey All The Things Ideas</a>
 
 <a href=https://github.com/s0lari/Hornets-Nest#splunk-detections>Splunk Detections</a>
 
