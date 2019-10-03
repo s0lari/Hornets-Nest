@@ -3,6 +3,8 @@ This repo will function as a repo for a number of resources/brain dumps that I c
 
 This is my effort at giving back to the security community- ill try to keep it tidy! ;)
 
+<a href=https://github.com/s0lari/Hornets-Nest/blob/master/README.md#honey-all-the-things-ideas>Honey All the things Ideas</a>
+
 # CyberChef Recipes
 
 **Encrypt Strings in Group Policy Preference File format (useful for creating Honey xml files with amusing passwords that PowerSploit etc will decrypt - like the lyrics of a certain Rick Astley song...)**
