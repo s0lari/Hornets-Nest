@@ -594,6 +594,10 @@ Fundamentally you're going to be in a pretty good place if you manage these thin
 
 ## Blue Team & Threat Hunting
 
+Paper on security analyst thinking, intuition and potentially some good solutions to get the best out of SOC Analysts.
+
+https://chrissanders.org/wp-content/uploads/2019/10/Creative-Choices-Developing-a-Theory-of-Divergence-Convergence-and-Intuition-in-Security-Analysts.pdf
+
 SANS Blue team wiki - helpful cheat sheets & Reference
 
 https://wiki.sans.blue/#!index.md
