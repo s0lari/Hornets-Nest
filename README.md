@@ -752,6 +752,10 @@ http://pentestit.com/adversary-emulation-tools-list/
 Large list of IR tools and resources
 
 https://github.com/meirwah/awesome-incident-response
+
+Atomic Threat Coverage is tool which allows you to automatically generate actionable analytics, designed to combat threats (based on the MITRE ATT&CK adversary model) from Detection, Response, Mitigation and Simulation perspectives:
+
+https://github.com/atc-project/atomic-threat-coverage
  
 Black Hills information security - awesome company that give away a tonne of free resources and tools.
 
