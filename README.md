@@ -550,6 +550,15 @@ This will attempt to show anomalous destination ports and remove internal destin
 | sort + "Count of Web"
 ```
 
+## Useful in situations where there isn't implemented or effective internet whitelisting. Detects file extensions that have been accessed on sites that the web proxy has determined are uncategorised or new/unknown. Had to remove a few extensions due to false-positive count being way too high.
+```
+| tstats count AS "Count of Web" from datamodel=Web where (nodename = Web) (Web.url!="whitelist1" AND Web.url!="whitelist2etc" AND Web.url="/*.com" OR Web.url="*.SCF" OR Web.url="*.INF" OR Web.url="*.LNK" OR Web.url="*.PS1" OR Web.url="*.PS1XML" OR Web.url="*.PS2" OR Web.url="*.PS2XML" OR Web.url="*.PSC1" OR Web.url="*.PSC2" OR Web.url="*.JSE" OR Web.url="*.VBE" OR Web.url="*.CMD" OR Web.url="*.GADGET" OR Web.url="*.MSP" OR Web.url="*.MSI" OR Web.url="*.DOC" OR Web.url="*.DOCX" OR Web.url="*.DOCM" OR Web.url="*.exe" OR Web.url="*.HTA"  OR Web.url="*.JAR" OR Web.url="*.VBS" OR Web.url="*.VB" OR Web.url="*.PDF" OR Web.url="*.SFX" OR Web.url="*.BAT" OR Web.url="*.DLL" OR Web.url="*.TMP" OR Web.url="*.py") (Web.category=unknown OR Web.category=uncategorized OR Web.category="Newly Registered Websites") groupby _time, host, Web.url, Web.category, Web.user, Web.http_content_type prestats=true 
+| stats dedup_splitvals=t count AS "Count of Web" by _time, host, Web.url, Web.category, Web.user, Web.http_content_type 
+| sort limit=0 _time 
+| rename Web.url AS url Web.category AS category Web.user AS user Web.http_content_type AS http_content_type 
+| fillnull "Count of Web" 
+| fields _time, host, url, category, user, http_content_type, "Count of Web"
+```
 
 # Defense in Depth Security stack
 
