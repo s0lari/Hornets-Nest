@@ -561,6 +561,15 @@ This will attempt to show anomalous destination ports and remove internal destin
 | fields _time, url, src,  category, user, http_content_type, "Count of Web"
 ```
 
+## (Template for lookup table use) Referencing the above lookup, file extensions can be tied to a lookup table with the first Column name being 'Web.url'. Speed increase is around 6 times faster than pre filtering as above query does over large periods of time. Credit to @CTOBInsights. :)
+
+```
+[| tstats count from datamodel=Web where (nodename = Web) (Web.category=unknown OR Web.category=uncategorized OR Web.category="Newly Registered Websites") prestats=true groupby _time Web.url Web.dest
+| fields Web.url Web.dest _time
+| search [ | inputlookup UnusualWebFileEndingDownload123.csv | fields Web.url]
+| stats count values(Web.url) by Web.dest]
+```
+
 # Defense in Depth Security stack
 
 Fundamentally you're going to be in a pretty good place if you manage these things in your environment - aims mainly at Windows Domain environements (brain dump, no priority/order as each environment is different, some are absolute must tho):
