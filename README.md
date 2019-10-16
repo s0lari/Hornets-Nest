@@ -679,7 +679,10 @@ https://canarytokens.org/generate
 
 https://www.linkedin.com/pulse/magma-use-case-framework-released-today-rob-van-os
 
- 
+
+Uncoder.IO is the online translator for SIEM saved searches, filters, queries, API requests, correlation and Sigma rules to help SOC Analysts, Threat Hunters and SIEM Engineers.
+
+https://uncoder.io/#
 
 Sigma rules for splunk (200 use cases various - MITRE ATT&CK Matrix based )
 
