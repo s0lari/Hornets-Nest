@@ -847,6 +847,13 @@ https://www.fireeye.com/blog/threat-research/2019/03/commando-vm-windows-offensi
  
 ## Red Team
 
+Attacking AD:
+
+https://www.tarlogic.com/en/blog/how-to-attack-kerberos/
+
+https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Active%20Directory%20Attack.md
+
+
 Massive collated list of attacks etc
 
 https://m0chan.github.io/2019/07/30/Windows-Notes-and-Cheatsheet.html
