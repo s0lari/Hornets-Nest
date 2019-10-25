@@ -435,6 +435,10 @@ PropertiesLIST="*objectClass*" AND
 PropertiesLIST="*Read Property*")
 ```
 
+Another additional detection that can be done for other types of Bloodhound scans (stealth):
+
+https://blog.menasec.net/2019/02/threat-hunting-7-detecting.html
+
 
 ## KERBEROASTING:
 
