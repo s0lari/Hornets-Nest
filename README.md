@@ -941,6 +941,12 @@ Windows Userland Persistence Fundamentals
 
 https://www.fuzzysecurity.com/tutorials/19.html
 
+UAC Bypass
+
+https://github.com/sailay1996/UAC_Bypass_In_The_Wild
+
+https://github.com/hfiref0x/UACME
+
 
 ## Digital Forensics
 
