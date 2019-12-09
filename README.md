@@ -935,10 +935,11 @@ Social Mapper is an Open Source Intelligence Tool that uses facial recognition t
 
 Mindmap of offensive assessment mindset. (Pentests, CTF, Bug Bounty etc) 
 
-
 https://github.com/dsopas/assessment-mindset
 
+Windows Userland Persistence Fundamentals
 
+https://www.fuzzysecurity.com/tutorials/19.html
 
 
 ## Digital Forensics
