@@ -947,6 +947,10 @@ https://github.com/sailay1996/UAC_Bypass_In_The_Wild
 
 https://github.com/hfiref0x/UACME
 
+C2 Matrix (showing a large number of options for C2 - even a guided selector!)
+
+https://www.thec2matrix.com/
+
 
 ## Digital Forensics
 
