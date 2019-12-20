@@ -964,6 +964,10 @@ C2 Matrix (showing a large number of options for C2 - even a guided selector!)
 https://www.thec2matrix.com/
 
 
+Covenant is a .NET command and control framework that aims to highlight the attack surface of .NET, make the use of offensive .NET tradecraft easier, and serve as a collaborative command and control platform for red teamers.Covenant is an ASP.NET Core, cross-platform application that includes a web-based interface that allows for multi-user collaboration.
+
+https://github.com/cobbr/Covenant
+
 ## Digital Forensics
 
 Cheat sheets for common DFIR tools
