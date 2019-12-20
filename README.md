@@ -968,6 +968,10 @@ Covenant is a .NET command and control framework that aims to highlight the atta
 
 https://github.com/cobbr/Covenant
 
+Fileless lateral movement tool that relies on ChangeServiceConfigA to run command - SpiderLabs/SCShell
+https://github.com/SpiderLabs/SCShell
+
+
 ## Digital Forensics
 
 Cheat sheets for common DFIR tools
