@@ -767,7 +767,19 @@ A 4-IN-1 SECURITY INCIDENT RESPONSE PLATFORM
 
 https://thehive-project.org/
 
- 
+Powershell Deobfuscation tools:
+
+http://www.kahusecurity.com/posts/introducing_psunveil.html
+
+https://github.com/R3MRUM/PSDecode
+
+VBA Deobfuscation tools:
+
+https://github.com/decalage2/ViperMonkey (ViperMonkey is a VBA Emulation engine written in Python, designed to analyze and deobfuscate malicious VBA Macros contained in Microsoft Office files (Word, Excel, PowerPoint, Publisher, etc). - how-to here https://isc.sans.edu/forums/diary/ViperMonkey+VBA+maldoc+deobfuscation/24346/)
+
+Bunch of tools good for deobfuscation and IR/Forensics
+
+http://www.kahusecurity.com/tools.html
 
 ## Purple Team
 
@@ -965,6 +977,10 @@ https://ghidra-sre.org/
  
 FLARE VM is a freely available and open sourced Windows-based security distribution designed for reverse engineers, malware analysts, incident responders, forensicators, and penetration testers.
 https://www.fireeye.com/blog/threat-research/2017/07/flare-vm-the-windows-malware.html
+
+Bunch of tools good for deobfuscation and IR/Forensics
+
+http://www.kahusecurity.com/tools.html
 
 
 ## General
