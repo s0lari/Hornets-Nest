@@ -867,6 +867,10 @@ https://www.fireeye.com/blog/threat-research/2019/03/commando-vm-windows-offensi
  
 ## Red Team
 
+Keepnote archive of a tonne of "Quick and Dirty Penetration Testing Notes"
+
+https://github.com/josephkingstone/keepnote
+
 Attacking AD:
 
 https://www.tarlogic.com/en/blog/how-to-attack-kerberos/
