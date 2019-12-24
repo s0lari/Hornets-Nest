@@ -894,7 +894,10 @@ A huge list of useful payloads and bypasses
 
 https://github.com/swisskyrepo/PayloadsAllTheThings
 
- 
+Decent catalog of attack and forensic commands
+
+https://redteams.fr/
+
 Great list of resources/tools in Attack-chain categories (more)
 
 https://github.com/yeyintminthuhtut/Awesome-Red-Teaming
