@@ -69,13 +69,10 @@ Get-GPPPassword searches a domain controller for groups.xml, scheduledtasks.xml,
 
 This can be used for our advantage by setting up a dummy GPO, or even just a basic xml file named something the above, with a value in it that contains a password of our own design. You would then set up auditing on this folder within SYSVOL on your domain, and alert if this particular file is accessed. 
 
-A baseline example xml file could be the following (from https://adsecurity.org/?p=384 )
+A baseline example xml file could be the following (from https://www.andreafortuna.org/2019/02/13/abusing-group-policy-preference-files-for-password-discovery/ )
 ```
-<?xml version=”1.0″ encoding=”utf-8″?>
-<Groups clsid=”{3125E937-EB16-4b4c-9934-544FC6D24D26}”>
-<User clsid=”{DF5F1855-51E5-4d24-8B1A-D9BDE98BA1D1}” name=”LocalTestUser” image=”0″ changed=”2013-07-04 00:07:13″ uid=”{47F24835-4B58-4C48-A749-5747EAC84669}”>
-<Properties action=”C” fullName=”” description=”” cpassword=”sFWOJZOU7bJICaqvmd+KAEN0o4RcpxxMLWnK7s7zgNR+JiJwoSa+DLU3kAIdXc1WW5NKrIjIe9MIdBuJHvqFgbcNS873bDK2nbQBqpydkjbsPXV0HRPpQ96phie6N9tn4NF3KYyswokkDnj8gvuyZBXqoG94ML8M1Iq7/jhe37eHJiZGyi5IBoPuCfKpurj2″ changeLogon=”0″ noChange=”0″ neverExpires=”0″ acctDisabled=”0″ userName=”LocalTestUser”/>
-</User>
+<?xml version="1.0" encoding="utf-8"?>
+<Groups clsid="{3125E937-EB16-4b4c-9934-544FC6D24D26}"><User clsid="{DF5F1855-51E5-4d24-8B1A-D9BDE98BA1D1}" name="Administrator (built-in)" image="2" changed="2017-10-10 11:23:48" uid="{355F2024-75C3-4EB4-9A16-BE114035625F}"><Properties action="U" newName="" fullName="" description="" cpassword="VPe/o9YRyz2cksnYRbNeQj35w9KxQ5ttbvtRaAVqxaE" changeLogon="0" noChange="1" neverExpires="1" acctDisabled="1" subAuthority="RID_ADMIN" userName="Administrator (built-in)"/></User>
 </Groups>
 ```
 You could use the cyberchef recipe at the top of this page to create a new string and enter that into the cpassword variable.
