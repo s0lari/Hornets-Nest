@@ -978,6 +978,11 @@ https://github.com/cobbr/Covenant
 Fileless lateral movement tool that relies on ChangeServiceConfigA to run command - SpiderLabs/SCShell
 https://github.com/SpiderLabs/SCShell
 
+Great priv escalation suite - Mac, Linux, Windows scripts.
+https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite
+
+**Excellent Resource** Fairly extensive pentest methodology and checklist.
+https://book.hacktricks.xyz/pentesting-methodology
 
 ## Digital Forensics
 
