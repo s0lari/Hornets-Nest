@@ -18,7 +18,7 @@ This is my effort at giving back to the security community- ill try to keep it t
 
 # CyberChef Recipes
 
-**Encrypt Strings in Group Policy Preference File format (useful for creating Honey xml files with amusing passwords that PowerSploit etc will decrypt - like the lyrics of a certain Rick Astley song...)**
+**Encrypt Strings in Group Policy Preference File format (useful for creating Honey xml files with amusing passwords that PowerSploit etc will decrypt - like the lyrics of a certain Rick Astley song...)** (Requires Cyberchef earlier version - eg 9.6.0 : https://github.com/gchq/CyberChef/releases/tag/v9.6.0)
 ```
 Encode_text('UTF16LE (1200)')
 
@@ -29,7 +29,7 @@ To_Base64('A-Za-z0-9+/=')
 
 Update 2019-08-21 - just found this cool git that has a bunch more recipes: https://github.com/mattnotmax/cyber-chef-recipes
 
-**Decrypt Strings in Group Policy Preference File format (to check the above, as well as for offensive checks).**
+**Decrypt Strings in Group Policy Preference File format (to check the above, as well as for offensive checks).** (Requires Cyberchef earlier version - eg 9.6.0 : https://github.com/gchq/CyberChef/releases/tag/v9.6.0)
 ```
 From_Base64('A-Za-z0-9+/=',true)
 
