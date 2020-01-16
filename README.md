@@ -850,9 +850,11 @@ https://github.com/olafhartong/ATTACKdatamap
 Applying a Threat Based Approach to Security Testing (great article on red team/purple team)
 
 https://threatexpress.com/blogs/2018/threat-gets-a-vote-applying-a-threat-based-approach-to-security-testing/
+
 Threat Mitigation Strategies: Part 1
 
 https://threatexpress.com/blogs/2018/threat-mitigation-strategies-observations-recommendations/
+
 Threat Mitigation Strategies: Part 2 (great collated list of 'wins' relating to previous two articles)
 
 https://threatexpress.com/blogs/2018/threat-mitigation-strategies-technical-recommendations-and-info-part-2/
@@ -950,7 +952,9 @@ Cheatsheet for kerberos attacks(lots of methods).
 
 https://gist.github.com/TarlogicSecurity/2f221924fef8c14a1d8e29f3cb5c5c4a
 
-Social Mapper is an Open Source Intelligence Tool that uses facial recognition to correlate social media profiles across different sites on a large scale. It takes an automated approach to search popular social media sites for targets' names and pictures to accurately detect and group a person’s presence, outputting the results into report that a human operator can quickly review. https://github.com/Greenwolf/social_mapper
+Social Mapper is an Open Source Intelligence Tool that uses facial recognition to correlate social media profiles across different sites on a large scale. It takes an automated approach to search popular social media sites for targets' names and pictures to accurately detect and group a person’s presence, outputting the results into report that a human operator can quickly review. 
+
+https://github.com/Greenwolf/social_mapper
 
 Mindmap of offensive assessment mindset. (Pentests, CTF, Bug Bounty etc) 
 
@@ -976,26 +980,33 @@ Covenant is a .NET command and control framework that aims to highlight the atta
 https://github.com/cobbr/Covenant
 
 Fileless lateral movement tool that relies on ChangeServiceConfigA to run command - SpiderLabs/SCShell
+
 https://github.com/SpiderLabs/SCShell
 
 Great priv escalation suite - Mac, Linux, Windows scripts.
+
 https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite
 
 **Excellent Resource** Fairly extensive pentest methodology and checklist.
+
 https://book.hacktricks.xyz/pentesting-methodology
 
 ## Digital Forensics
 
 Cheat sheets for common DFIR tools
+
 https://digital-forensics.sans.org/community/cheat-sheets
  
 Same as above - in twice due to categories and because it is an awesome book.
+
 https://www.amazon.co.uk/Incident-Response-Computer-Forensics-Third-ebook/dp/B00JFG7152
  
 A software reverse engineering (SRE) suite of tools developed by NSA's Research Directorate
+
 https://ghidra-sre.org/
  
 FLARE VM is a freely available and open sourced Windows-based security distribution designed for reverse engineers, malware analysts, incident responders, forensicators, and penetration testers.
+
 https://www.fireeye.com/blog/threat-research/2017/07/flare-vm-the-windows-malware.html
 
 Bunch of tools good for deobfuscation and IR/Forensics
@@ -1006,53 +1017,69 @@ http://www.kahusecurity.com/tools.html
 ## General
 
 CIS top 20 security controls  - great for scoring the maturity of a company's security.
+
 https://learn.cisecurity.org/20-controls-download
  
 Great resources on here including a free excel tool that helps you 'score' your companies maturity against the CIS Top 20 controls.
+
 https://www.auditscripts.com/free-resources/critical-security-controls/
  
 CIS online assessment tool (html version of the excel manual assessment tool).
+
 https://www.cisecurity.org/blog/cis-csat-free-tool-assessing-implementation-of-cis-controls/
  
 SANS posters - some great 'quick glance reference' info here.
+
 https://uk.sans.org/security-resources/posters
  
 Excellent CTF site including various other challenges (DFIR, malware reversing, Stego etc)
+
 https://www.hackthebox.eu/
  
 Yearly CTF that is story driven - very high quality CTF containing a range of challenges.
+
 https://www.holidayhackchallenge.com/2018/
  
 A lot of various labs (ctf, blue team, etc) - nice thing is no VPN required, all accessible through web browser.
+
 https://attackdefense.com/
  
 ## Misc other
  
 Great Cron Job building website
+
 https://crontab.guru/#*/10_6-17_*_*_1-5
  
 Easily Report Phishing and Malware
+
 https://decentsecurity.com/#/malware-web-and-phishing-investigation/
  
 Scan Phishing sites (generates webpage of site)
+
 https://urlscan.io/
  
 Open Source Threat intel site
+
 https://pulsedive.com/
  
 TCPIP Utils - quick IP/dns lookup check
+
 https://dnslytics.com/
  
 Awesome tool - CyberChef is a simple, intuitive web app for carrying out all manner of "cyber" operations within a web browser.
+
 https://gchq.github.io/CyberChef/
  
 CTF Walkthroughs (good to watch for thought process)
+
 https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA
  
 Various CTF and hack related things.
+
 https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w/videos?disable_polymer=1
 
 Fun way to learn Regex
+
 https://regexcrossword.com/
 
 ## Podcasts 
