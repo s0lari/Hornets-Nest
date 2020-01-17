@@ -94,7 +94,7 @@ Set up a service account that is not used by the business in any way and set the
 Set ServicePrinciple name like so :
 ```
 setspn -U -A http/blah SERVICE_USER_ACCOUNT_HERE (had mixed results with this)
-SetSPN -a <computer name>/random-name-spn <domain>\<newly created service account name>
+SetSPN -a <computer name>/random-name-spn <domain>\<newly created service account name> (worked most recently in lab)
 ```
 See Splunk Detections section for example query.
 
