@@ -614,6 +614,17 @@ Fundamentally you're going to be in a pretty good place if you manage these thin
 
 ## Blue Team & Threat Hunting
 
+Quick correlation of group policy settings to event IDs for event logs
+
+https://girl-germs.com/?p=363
+
+Windows event forwarding list and GPO config suggestions:
+
+https://github.com/palantir/windows-event-forwarding/
+
+https://github.com/nsacyber/Event-Forwarding-Guidance/tree/master/Events
+
+
 Nice little Google Chrome plugin for threat lookups:
 
 https://chrome.google.com/webstore/detail/threatpinch-lookup/ljdgplocfnmnofbhpkjclbefmjoikgke?hl=en
