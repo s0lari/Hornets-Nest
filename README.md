@@ -750,6 +750,10 @@ Recommended EDR (commercial):
 https://www.carbonblack.com/products/cb-threathunter/
  
 https://www.endgame.com/platform
+
+https://www.paloaltonetworks.com/cortex/cortex-xdr
+
+https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection
  
 OWASP Project
 
@@ -789,6 +793,17 @@ https://github.com/decalage2/ViperMonkey (ViperMonkey is a VBA Emulation engine 
 Bunch of tools good for deobfuscation and IR/Forensics
 
 http://www.kahusecurity.com/tools.html
+
+(Response Operation Collection Kit)
+An open source Network Security Monitoring platform.
+
+https://rocknsm.io/
+
+Skadi is a free, open source collection of tools that enables the collection, processing and advanced analysis of forensic artifacts and images. It works on MacOS, Windows, and Linux machines. It scales to work effectively on laptops, desktops, servers, the cloud, and can be installed on top of hardened / gold disk images.
+https://github.com/orlikoski/Skadi
+
+
+
 
 ## Purple Team
 
