@@ -13,6 +13,8 @@ This is my effort at giving back to the security community- ill try to keep it t
 
 <a href=https://github.com/s0lari/Hornets-Nest#defense-in-depth-security-stack>Defence in Depth Stack</a>
 
+<a href=https://github.com/s0lari/Hornets-Nest/blob/master/README.md#lab-setup>Lab setup</a>
+
 <a href=https://github.com/s0lari/Hornets-Nest#security-resources---links-books-ctfs-etc>Security Resources - Links, Books, Podcasts</a>
 
 
