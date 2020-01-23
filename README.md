@@ -609,7 +609,32 @@ Fundamentally you're going to be in a pretty good place if you manage these thin
 30) Disallow the use of personal email (gmail/hotmail etc) - no point in spending loads of money on filtering and tech only to have your workstations pwned by a personal phishing email.
 31) OSINT/Recon check yourself - see what is available or posted by your users! Especially Linkedin for technologies used by admins/secops.
 
+# Lab Setup
 
+## Office 
+
+OK - Office deployment automation:
+Step 1, are you gonna be doing it repeatedly or potentially in a bandwidth-limited environment?  If so, run the download step once to some storage which is 1) referenceable as a windows drive letter from wherever you want to finally install it and 2) permanent so it's not gonna get wiped out by automated teardown of a server etc.
+1 - Set up your staging
+Use the Office Deployment Tool (ODT, https://www.microsoft.com/en-us/download/confirmation.aspx?id=49117)
+Installing that small tool will set up a folder hierarchy that acts as your staging for the rest of the actions; this staging setup can be on a different system than where you want the final install.
+2 - How to define which bits of Office you want (inc language packs, 32v64 bit versions, and optionally, how to license it automatically / pre-accept the EULA for promptless install)
+All of this is driven by an XML file; making it yourself is a pain, but there is a generator wizard at https://config.office.com/ that I'd recommend using
+That config file acts for both the download and install steps.
+3 - Download
+In the staging from step 1, you will have a setup.exe.
+Run it as admin from a command or powershell prompt:
+setup.exe /download configuration.xml (this being the file you created in stage 2)
+You'll get no visual prompts at this stage but you'll see the system bandwidth use increase and some new files appear in the staging environment, just let it run (about 3.5 GB last time I did this) until the cmd drops you back to a prompt.
+4 - Install
+Move setup.exe and configuration.xml to the system on which you are installing
+Remember to modify configuration.xml filepaths (quotes required around full path even when no spaces) if you're installing it from a remote system
+Run as admin:
+setup.exe /configure configuration.xml
+You should immediately get the Office install splash page and it should auto config
+5 - Initial config (only bit I'm not familiar with automating, sorry...usually intended to be end-user facing)
+Run any office app from the standard suite (word, excel etc - NOT Outlook for first run)
+Follow the sign-in / 365 account connection wizard.
 
 # Security Resources - Links, books, CTFs, etc
 
