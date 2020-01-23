@@ -613,6 +613,8 @@ Fundamentally you're going to be in a pretty good place if you manage these thin
 
 # Lab Setup
 
+Choose your relevant cloud provider (azure do 30 day trials, but the systems are a bit sluggish - Google cloud boxes are fast though!)
+
 One of my major gripes with demos and labs that folks show is that they show the attack and relevant detections in isolation from what would be a production environment, with all the relevant noise and events that are a part of a normal day to day network. 
 
 I came across an awesome couple of scripts that can solve this issue at least to some extent:
@@ -626,8 +628,8 @@ I've had some success with the first module (haven't had a chance to try the 2nd
 General setup could be :
 
 1) 1 Domain controller server and relevant Active Directory configuration
-2) 1/2 Servers
-3) 1/2 Client machines with office installed (see below)
+2) 1/2 Servers domain joined
+3) 1/2 Client machines with office installed (see below) that are also domain joined.
 4) 1 Offensive system that is not domain joined, but on the same network (this can simulate an external attacker to host tools/c2 etc- you could totally go the exta mile and configure another network entirely with relevant VM firewall appliances etc, but it is a time/cost vs what are you trying to demonstrate decision).
 
 
