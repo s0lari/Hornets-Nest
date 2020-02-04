@@ -64,6 +64,26 @@ Unfortunately this isn't always possible due to internal politics in a company, 
 
 One of the best videos i've ever watched on cyber-deception in AD : https://www.youtube.com/watch?v=vLWGJ3f3-gI
 
+The logging GPO settings required are within Computer Configuration > Policies > Windows Settings > Security Settings > Advanced Audit Policy Configuration > Audit Policies
+
+(Account Logon)
+ Audit Credential Validation  Success and Failure   
+ Audit Kerberos Authentication Service   Success and Failure   
+ Audit Kerberos Service Ticket Operations  Success and Failure   
+ Audit Other Account Logon Events Success and Failure 
+  
+ (DS Access)
+ Audit Directory Service Access  Success and Failure  
+ 
+ (Logon/Logoff)
+ Audit Logon  Success and Failure   
+
+ (Object Access)
+ Audit Detailed File Share  Success and Failure   
+ Audit File Share  Success and Failure   
+ Audit File  Success and Failure   
+
+
 ## Powersploit landmine:
 Powersploit has a script called "Get-GPPPassword" - this file does the following:
 
@@ -124,7 +144,8 @@ Previous detection methods for bloodhound revolved around looking at large numbe
 
 If you were unable to log at this level (flat network) or someone was running the latest version of bloodhound, you may not be able to detect this in the standard way. Therefore the following is an interesting alternative.
 
-Some inspiration from http://www.stuffithoughtiknew.com/2019/02/detecting-bloodhound.html and help from @CTOBInsights with the Splunk query.
+Some inspiration from http://www.stuffithoughtiknew.com/2019/02/detecting-bloodhound.html and help from @CTOBInsights with the Splunk query. You will also have to enable this in GPO : Computer Configuration > Policies > Windows Settings > Security Settings > Advanced Audit Policy Configuration > Audit Policies > DS Access : Audit Directory Service Access (success and failure)
+
 
 When you run Bloodhound, you get the following events on your AD Security log after having configured logging on a particular canary user (see the link above): 
 
