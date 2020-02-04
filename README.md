@@ -67,18 +67,22 @@ One of the best videos i've ever watched on cyber-deception in AD : https://www.
 The logging GPO settings required are within Computer Configuration > Policies > Windows Settings > Security Settings > Advanced Audit Policy Configuration > Audit Policies
 
 (Account Logon)
+
  Audit Credential Validation  - Success and Failure   
  Audit Kerberos Authentication Service  - Success and Failure   
  Audit Kerberos Service Ticket Operations - Success and Failure   
  Audit Other Account Logon Events - Success and Failure 
   
  (DS Access)
+
  Audit Directory Service Access - Success and Failure  
  
  (Logon/Logoff)
+
  Audit Logon - Success and Failure   
 
  (Object Access)
+
  Audit Detailed File Share - Success and Failure   
  Audit File Share - Success and Failure   
  Audit File - Success and Failure   
