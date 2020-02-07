@@ -663,6 +663,12 @@ https://computingforgeeks.com/install-docker-and-docker-compose-on-debian-10-bus
 
 https://medium.com/@airman604/kali-linux-in-a-docker-container-5a06311624eb
 
+Interesting: 
+
+https://wjmccann.github.io/blog/2017/12/03/Kali-Linux-in-Docker-on-Windows-10
+
+http://somatorio.org/en/post/running-gui-apps-with-docker/
+
 
 ## Office 
 
