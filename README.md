@@ -657,6 +657,12 @@ General setup could be :
 3) 1/2 Client machines with office installed (see below) that are also domain joined.
 4) 1 Offensive system that is not domain joined, but on the same network (this can simulate an external attacker to host tools/c2 etc- you could totally go the exta mile and configure another network entirely with relevant VM firewall appliances etc, but it is a time/cost vs what are you trying to demonstrate decision).
 
+Installing Docker on linux VM for Kali:
+
+https://computingforgeeks.com/install-docker-and-docker-compose-on-debian-10-buster/
+
+https://medium.com/@airman604/kali-linux-in-a-docker-container-5a06311624eb
+
 
 ## Office 
 
