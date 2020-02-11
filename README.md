@@ -3,7 +3,7 @@ This repo will function as a repo for a number of resources/brain dumps that I c
 
 This is my effort at giving back to the security community- ill try to keep it tidy! ;)
 
-You can follow me on twitter:  @S0lari1
+You can follow me on twitter:  <a href=https://twitter.com/s0lari1>@S0lari1</a>
 
 **INDEX:**
 
