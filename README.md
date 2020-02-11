@@ -3,6 +3,8 @@ This repo will function as a repo for a number of resources/brain dumps that I c
 
 This is my effort at giving back to the security community- ill try to keep it tidy! ;)
 
+You can follow me on twitter:  @S0lari1
+
 **INDEX:**
 
 <a href=https://github.com/s0lari/Hornets-Nest#cyberchef-recipes>CyberChef Recipes</a>
