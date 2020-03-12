@@ -11,6 +11,8 @@ You can follow me on twitter:  <a href=https://twitter.com/s0lari1>@S0lari1</a>
 
 <a href=https://github.com/s0lari/Hornets-Nest/blob/master/README.md#honey-all-the-things-ideas>Honey All The Things Ideas</a>
 
+<a href=https://github.com/s0lari/Hornets-Nest/blob/master/README.md#inverted-logic-honey-detection>Inverted Logic Honey Detection</a>
+
 <a href=https://github.com/s0lari/Hornets-Nest#splunk-detections>Splunk Detections</a>
 
 <a href=https://github.com/s0lari/Hornets-Nest#defense-in-depth-security-stack>Defence in Depth Stack</a>
