@@ -153,6 +153,8 @@ So if the attacker attempts to kerberoast/password spray, and does so generally,
 
 The only way the attacker would be able to get around this is by slowing down his attacks to almost a one-by-one approach, and attempting to stay under the threshold of the time range of the detection - but that is exactly what we're trying to at least do - dictate the rules in an attack engagement. Depending on the time range of the detection, you could severely slow down any kind of attack like this.
 
+We are still using the honey accounts, but it is their odd absence that we're tracking - so instead of it being anomalous that they are being accessed, in the context of large sweeps, it is anomalous that they're NOT being accessed. Build out inverse logic detections like this where possible (it may not be) for when you implement a honey object.
+
 # Splunk Detections
 ## Query for Splunk detections for Honey User
 
