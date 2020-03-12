@@ -936,6 +936,9 @@ https://rocknsm.io/
 Skadi is a free, open source collection of tools that enables the collection, processing and advanced analysis of forensic artifacts and images. It works on MacOS, Windows, and Linux machines. It scales to work effectively on laptops, desktops, servers, the cloud, and can be installed on top of hardened / gold disk images.
 https://github.com/orlikoski/Skadi
 
+Breakdown of RDP connections and their relevant event logs:
+
+https://www.13cubed.com/downloads/rdp_flowchart.pdf
 
 
 
