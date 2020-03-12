@@ -128,6 +128,28 @@ See Splunk Detections section for example query.
 
 **COUNTER-POINT: Some red-teamers will check for honey accounts - generally this is done by checking when the account was last used/logged into - if you have a script/manual process that logs into that account once every 14 days or so, you should be alright -whitelist this activity in SIEM**
 
+## Inverted logic honey detection
+
+On the topic of red team / threat actor hunting for honey accounts - if we assume that they do indeed find some of these accounts, they may sculpt their attacks around these beacons, much like someone may try to navigate a minefield. We can also use this to our advantage if we invert the logic of the detection.
+
+An example may be that we have a number of honey users or honey SPN accounts created. If assume that the attacker knows that these accounts are beacons, then we can also imagine that they will continue with the attacks that they have in mind, but make exceptions for these accounts in their tools and not password spray/kerberoast those accounts, but will continue to action all the other accounts. We can build a detection for this by checking for large numbers of requests, but of those results, they do not contain the honey entries. 
+
+A logic would be something like (haven't managed to test, but take the principle and re-work the query language):
+
+```
+index=winevent_sec EventCode=4769 Ticket_Options=0x40810000 Service_Name!="*$" Service_Name!="krbtgt" Account_Name!="*$@*" Service_Name!="super_not_shady_SPN"
+| dedup Service_Name 
+| stats count by user 
+| where count>X (where x is a good baseline) 
+```
+
+Where Service_Name=super_not_shady_SPN is a honey SPN. This could also just as easily be user=xxxxxxx or any other honeyAD Object. 
+
+This will bring up all the SPNs that have been queried except the honey account, dedupe the service names, count them by user - if the baseline triggers high (obviously having whitelisted known services and management tools that regularly query AD etc and trigger this rule), and it is missing the honey accounts, we may have an attempted bypass of the honey SPN beacon. 
+
+So if the attacker attempts to kerberoast/password spray, and does so generally, we will detect them - if they attempt to bypass the beacons, we will detect them. Either way, we should detect them.
+
+The only way the attacker would be able to get around this is by slowing down his attacks to almost a one-by-one approach, and attempting to stay under the threshold of the time range of the detection - but that is exactly what we're trying to at least do - dictate the rules in an attack engagement. Depending on the time range of the detection, you could severely slow down any kind of attack like this.
 
 # Splunk Detections
 ## Query for Splunk detections for Honey User
