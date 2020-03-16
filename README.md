@@ -697,6 +697,22 @@ https://wjmccann.github.io/blog/2017/12/03/Kali-Linux-in-Docker-on-Windows-10
 
 http://somatorio.org/en/post/running-gui-apps-with-docker/
 
+To add more noise into your lab or AD environment if it has already been built:
+
+https://github.com/davidprowe/BadBlood
+
+This will generate numerous AD objects.
+
+A few AD lab deployment solutions (various infrastructure scenarios):
+
+https://github.com/outflanknl/Invoke-ADLabDeployer
+
+https://github.com/clong/DetectionLab
+
+https://github.com/jaredhaight/WindowsAttackAndDefenseLab
+
+https://github.com/xFreed0m/Disruption
+
 
 ## Office 
 
