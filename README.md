@@ -128,7 +128,7 @@ SetSPN -a <computer name>/random-name-spn <domain>\<newly created service accoun
 ```
 See Splunk Detections section for example query.
 
-## AS-REP Roasting honey user
+###### AS-REP Roasting honey user
 
 To increase the attack surface of kerberoasting detections, we can also create a new user account that has the option "Do not require Kerberos pre-authentication" within the user properties within Active Directory Users and Computers > Account tab > Account Options (scroll to the bottom). 
 
