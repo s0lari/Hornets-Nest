@@ -128,6 +128,20 @@ SetSPN -a <computer name>/random-name-spn <domain>\<newly created service accoun
 ```
 See Splunk Detections section for example query.
 
+## AS-REP Roasting honey user
+
+To increase the attack surface of kerberoasting detections, we can also create a new user account that has the option "Do not require Kerberos pre-authentication" within the user properties within Active Directory Users and Computers > Account tab > Account Options (scroll to the bottom). 
+
+Check for logging on Event ID 4768 containing the user account name that you configured. Depending on the tool, there may also be a event ID 4625 to go along with the 4768 event at near the same time.
+
+Detection logic :
+
+```
+index=winevent_sec EventCode=4768 Account_Name=xxxxxx
+```
+
+Where xxxxxx is the name of the AS-Rep Roast honey user.
+
 **COUNTER-POINT: Some red-teamers will check for honey accounts - generally this is done by checking when the account was last used/logged into - if you have a script/manual process that logs into that account once every 14 days or so, you should be alright -whitelist this activity in SIEM**
 
 ## Inverted logic honey detection
