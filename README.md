@@ -970,6 +970,13 @@ Breakdown of RDP connections and their relevant event logs:
 
 https://www.13cubed.com/downloads/rdp_flowchart.pdf
 
+Details/primer on named pipes and potential hacks:
+
+https://hackinparis.com/data/slides/2017/2017_Cohen_Gil_The_forgotten_interface_Windows_named_pipes.pdf
+
+Threat hunting overview:
+
+https://github.com/marcurdy/dfir-toolset/blob/master/ThreatHunt.md
 
 
 ## Purple Team
@@ -1057,6 +1064,8 @@ https://www.scythe.io/platform
 Complete Mandiant Offensive VM (Commando VM), the first full Windows-based penetration testing virtual machine distribution. Good for attacking windows Active directory based environments.
 
 https://www.fireeye.com/blog/threat-research/2019/03/commando-vm-windows-offensive-distribution.html
+
+
  
 ## Red Team
 
