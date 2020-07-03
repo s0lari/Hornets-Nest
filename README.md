@@ -56,6 +56,14 @@ Find_/_Replace({'option':'Regex','string':'\\\'\\+'},'',true,false,true,false)
 To_Lower_case()
 ```
 
+**Generic Base64 powershell script decoder**
+```
+From_Base64('A-Za-z0-9+/=',true)
+Decode_text('UTF-16LE (1200)')
+CSS_Beautify('\\t')
+Syntax_highlighter('auto detect')
+```
+
 # Honey-all-the-things ideas
 
 Before looking into these interesting fun things to do - you absolutely must have good AD configuration in place. A couple of helpful examples:
