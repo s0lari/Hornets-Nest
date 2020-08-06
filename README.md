@@ -986,6 +986,10 @@ Threat hunting overview:
 
 https://github.com/marcurdy/dfir-toolset/blob/master/ThreatHunt.md
 
+Adversary tracking ideas:
+
+https://stoerchl.github.io/
+
 
 ## Purple Team
 
