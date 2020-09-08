@@ -990,6 +990,9 @@ Adversary tracking ideas:
 
 https://stoerchl.github.io/
 
+Technical approaches to uncovering and remediating Malicious activity (CISA) (fantastic resource)
+https://us-cert.cisa.gov/ncas/alerts/aa20-245a
+
 
 ## Purple Team
 
