@@ -3,8 +3,6 @@ This repo will function as a repo for a number of resources/brain dumps that I c
 
 This is my effort at giving back to the security community- ill try to keep it tidy! ;)
 
-You can follow me on twitter:  <a href=https://twitter.com/s0lari1>@S0lari1</a>
-
 Also you can check out the powershell based Email DLP system tester here : https://github.com/s0lari/DeLPhos - generates content & sends emails to test if your dlp rules are actually firing in relation to email traffic.
 
 **INDEX:**
